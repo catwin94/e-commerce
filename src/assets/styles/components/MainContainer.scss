@@ -1,7 +1,7 @@
 @import '../Variables.scss';
 @import '../App.scss';
 
-.register{
+.container{
   background-color: $grayBackground;
   opacity: 0.9;
   display: flex;
@@ -9,9 +9,9 @@
   justify-content: center;
   flex-direction: column;
   padding: 3rem;
-  min-height: calc(100vh - 17rem); /*del 100% de view height (100vw) va a ocupar toda la pantalla menos 200 px que se reservan para el header y el footer*/ /*Quiero que se vean 200px exceptuando el header y el footer*/
+  min-height: calc(100vh - 16rem); /*del 100% de view height (100vw) va a ocupar toda la pantalla menos 200 px que se reservan para el header y el footer*/ /*Quiero que se vean 200px exceptuando el header y el footer*/
 }
-.register__container{
+.sub__container{
   background: $whiteBackground;
   border-radius: 4rem;
   color: $mainFontColor;

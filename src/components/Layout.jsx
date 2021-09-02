@@ -1,15 +1,14 @@
-import React, {Children, Fragment} from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import '../assets/styles/App.scss'
 
-const Layout = ({children}) => {
-  return (  
-    <Fragment>
-      <Header/>
-      {Children}
-      <Footer/>
-    </Fragment>
-  );
-}
+const Layout = ({children}) => (  
+    <div className='app'>
+      <Header />
+      {children}
+      <Footer />
+    </div>
+);
  
 export default Layout;

@@ -1,17 +1,16 @@
 import React, { Fragment } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import {Link} from 'react-router-dom';
 import googleIcon from '../assets/statics/google-icon2.png';
 import twitterIcon from '../assets/statics/twitter-icon2.png';
 import '../assets/styles/components/Login.scss';
-import '../assets/styles/components/RegisterContainer.scss';
+import '../assets/styles/components/MainContainer.scss';
 import '../assets/styles/components/Button.scss';
 import '../assets/styles/components/Input.scss';
 
 const Login = () => {
   return (  
-    <section className="register">
-        <section className="register__container">
+    <section className="container">
+        <section className="sub__container">
             <h2 tabindex="0">Inicia sesión</h2>
             <form className="login__container--form">
                 <input area-label="Correo" className="input" type="text" placeholder="Correo" />
@@ -32,7 +31,9 @@ const Login = () => {
                     <img src={twitterIcon} alt="Twitter" />Inicia sesión con Twitter
                 </div>
             </section>
-            <p className="login__container--register">No tienes ninguna cuenta <a href="">Registrate</a></p>
+            <p className="login__container--register">No tienes ninguna cuenta 
+                <Link to="/register"> Registrate </Link>
+            </p>
         </section>
     </section>
   );

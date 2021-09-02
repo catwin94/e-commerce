@@ -14,7 +14,13 @@ body{
   background: $bodyBackground;
   // width: 100vw;
   // height: 100vh;
-  margin: 0;
   display: flex;
   flex-flow: column;
+}
+
+.app{
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-around;
+  min-height: 100vh;
 }

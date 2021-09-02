@@ -7,6 +7,7 @@ $themeFont : 'Noto Sans', sans-serif;
 $mainFontColor: #3b3936;
 $secondaryFontColor: #f0f0f0;
 $ligthFontColor: #84828F;
+$redFontColor: #BA1F33;
 
 // Fonts size
 $fontSize: (
@@ -15,6 +16,7 @@ $fontSize: (
   "normal": 1.5rem,
   "large": 2rem,
   "xlarge": 2.3rem,
+  "xxlarge": 8rem,
 );
 @function fontSize($name){
   @return map-get($fontSize, $name);
