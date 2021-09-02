@@ -1,0 +1,21 @@
+@import '../Variables.scss';
+@import '../App.scss';
+
+.button {
+  border: solid 0.2rem $headerBackground;
+  border-radius: 2.5rem;
+  background: $bodyBackground;
+  color: $mainFontColor;  
+  cursor: pointer;
+  font-size: fontSize(medium);
+  font-weight: bold;
+  height: 5rem;
+  letter-spacing: 0.1rem;
+  margin: 1rem 0rem;
+}
+
+.button:hover {  
+  background: $headerBackground;
+  border: none;
+  color: $bodyBackground;
+}

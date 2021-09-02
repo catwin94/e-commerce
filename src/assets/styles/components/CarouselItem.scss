@@ -1,0 +1,67 @@
+@import '../Variables.scss';
+@import '../App.scss';
+
+.carousel-item{
+  background-color: palevioletred;
+  width: 15rem;
+  height: 20rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  margin-right: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  transition: 450ms; /*Hago que la transicion sea mas suave y se centre a la izquierda*/
+  transform-origin: center left;
+  position: relative;
+
+  &:hover ~ .carousel-item{
+    /*cuando un item este en hover todos los otros sin hover (~) haran lo que dice entre {} */
+    /*Es un selector de hermanos, por ejemplo con
+    div ~ p seleccionamos todos los p hermanos de un div*/
+    transform: translate3d(10rem, 0, 0);/*Cuando hacemos hover todos los elementos se desplazaran hacia la derecha*/
+  }
+
+  & img{
+    width: 15rem; /*tamaño del item div*/
+    height: 20rem;
+    object-fit: cover; /*La imagen recupera la forma original*/
+  }
+
+  & .carousel-item__details{
+    background: linear-gradient(to top, rgba(0,0,0,0.4) 0% , rgba(0,0,0,0) 100%);
+    font-size: 10px;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  
+    &:hover{
+      opacity: 1;
+    }
+  
+    & img{
+      width: 20px;
+    }
+  
+  }
+
+}
+
+.carousel-container:hover .carousel-item{
+  opacity: 0.3;
+
+  &:hover{
+    /*cuando ambas esten en hover*/
+    transform: scale(1.4);
+    opacity: 1;
+  }
+}

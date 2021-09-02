@@ -1,0 +1,68 @@
+@import '../Variables.scss';
+@import '../App.scss';
+
+// .register{
+//   background-color: $grayBackground;
+//   opacity: 0.9;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+//   padding: 3rem;
+//   min-height: calc(100vh - 17rem); /*del 100% de view height (100vw) va a ocupar toda la pantalla menos 200 px que se reservan para el header y el footer*/
+// }
+// .register__container{
+//   background: $whiteBackground;
+//   border-radius: 4rem;
+//   color: $mainFontColor;
+//   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.7);
+//   padding: 6rem 4.8rem 4rem;
+//   min-height: 70rem;
+//   width: 39rem;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   & h2 {
+//     text-align: center;
+//     font-size: fontSize(large);
+//   }
+// }
+
+.register__container--form{
+  display: flex;
+  flex-direction: column;
+
+  & input{
+    font-family: 'Muli', sans-serif;
+    font-size: fontSize(normal);
+    color: $mainFontColor;
+    background-color: transparent;
+    height: 5rem;
+    margin-bottom: 2rem;
+    padding: 0rem 2rem;
+    border-top: none;
+    border-right: none;
+    border-bottom: solid $mainFontColor 0.2rem;
+    border-left: none;
+    outline: none;
+  }
+
+  & input:focus::placeholder {
+    color: transparent;
+  }
+
+}
+
+.register__container--login a{
+  color: $mainFontColor;
+  font-size: fontSize(medium);
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+
+  &:hover{
+    color: $headerBackground;
+    text-decoration: underline;
+  }
+}

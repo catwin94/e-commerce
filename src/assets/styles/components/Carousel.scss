@@ -1,0 +1,18 @@
+@import '../Variables.scss';
+@import '../App.scss';
+
+/* Carousel styles */
+.carousel{
+  // background: linear-gradient($bodyBackground, $headerBackground);
+  width: inherit;
+  overflow: scroll;
+  padding: 3rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;/*Todos los elementos que esten dentro de el, se ubicaran de forma relativa a el padre (carousel)*/
+  & .carousel-container{
+    white-space: nowrap; /*No manda las cosas al siguiente renglon cuando se queda sin espacio*/
+    margin: 2rem 0px;
+    padding-bottom: 1rem; /*para que no se corte la img cuando hacemos hover*/
+  }
+}

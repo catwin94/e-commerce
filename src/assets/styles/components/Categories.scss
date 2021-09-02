@@ -1,0 +1,19 @@
+@import '../Variables.scss';
+@import '../App.scss';
+
+.carousel-container{
+  flex: 1; /*ocupa todo el ancho disponible => flex: 1 1 auto*/
+  /* display: flex;
+  flex-flow: column;
+  align-items: center; */
+  display: block;
+  padding: 3rem;
+  background-color: $grayBackground;
+  
+  & h1{
+    color: $secondaryFontColor;
+    text-align: center;
+    font-size: fontSize(large);
+  }
+}
+

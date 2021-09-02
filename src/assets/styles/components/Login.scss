@@ -1,0 +1,64 @@
+@import '../Variables.scss';
+@import '../App.scss';
+
+.login__container--form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: fontSize(medium);
+  }
+}
+
+
+.login__container--remember-me {
+  color: $mainFontColor;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+  & a {
+    color: $mainFontColor;
+    font-size: fontSize(medium);
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}
+
+
+.login__container--social-media > div {
+  /* > significa a todos los div hijos de login__container--social-media*/
+  display: flex;
+  align-items: center;
+  font-size: fontSize(medium);
+  margin-bottom: 1rem;
+  justify-content: center;
+
+  & > img {
+    /* > significa a tomas la img que esten dentro de div que esten dentro de login__container--social-media*/
+    width: 2.5rem;
+    margin-right: 3rem;
+  }
+}
+
+
+
+.login__container--register {
+  font-size: fontSize(medium);
+  text-align: center;
+
+  & a {
+    color: $mainFontColor;
+    font-weight: bold;
+    font-size: fontSize(medium);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
