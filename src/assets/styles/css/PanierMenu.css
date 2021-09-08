@@ -1,0 +1,98 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 100vh;
+}
+
+.panier-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.panier-menu li {
+  list-style: none;
+}
+
+.panier-menu .submenu {
+  position: relative;
+}
+
+.panier-menu .submenu .panier {
+  display: none;
+}
+
+.panier-menu .submenu .panier .panier-table {
+  color: #3b3936;
+}
+
+.panier-menu .submenu img {
+  margin-right: 2.5rem;
+  width: 3.2rem;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  margin: 1rem 2rem 1rem 0rem;
+}
+
+.panier-menu .submenu img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.panier-menu .submenu:hover #panier__container {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  z-index: 1;
+  padding: 2rem;
+  min-height: 20rem;
+  min-width: 30rem;
+  border-radius: 0.6rem;
+  background-color: #f0f0f0;
+  -webkit-box-shadow: 0rem 0rem 10rem 1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0rem 0rem 10rem 1rem rgba(0, 0, 0, 0.5);
+}
+/*# sourceMappingURL=PanierMenu.css.map */

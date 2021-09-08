@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 100vh;
+}
+
+/* Carousel styles */
+.carousel {
+  width: inherit;
+  overflow: scroll;
+  padding: 3rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+  /*Todos los elementos que esten dentro de el, se ubicaran de forma relativa a el padre (carousel)*/
+}
+
+.carousel .carousel-container {
+  white-space: nowrap;
+  /*No manda las cosas al siguiente renglon cuando se queda sin espacio*/
+  margin: 2rem 0px;
+  padding-bottom: 1rem;
+  /*para que no se corte la img cuando hacemos hover*/
+}
+/*# sourceMappingURL=Carousel.css.map */

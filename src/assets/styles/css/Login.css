@@ -1,0 +1,110 @@
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 100vh;
+}
+
+.login__container--form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login__container--form label {
+  font-size: 1.3rem;
+}
+
+.login__container--remember-me {
+  color: #3b3936;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.login__container--remember-me a {
+  color: #3b3936;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.login__container--remember-me a:hover {
+  text-decoration: underline;
+}
+
+.login__container--social-media > div {
+  /* > significa a todos los div hijos de login__container--social-media*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login__container--social-media > div > img {
+  /* > significa a tomas la img que esten dentro de div que esten dentro de login__container--social-media*/
+  width: 2.5rem;
+  margin-right: 3rem;
+}
+
+.login__container--register {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.login__container--register a {
+  color: #3b3936;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.login__container--register a:hover {
+  text-decoration: underline;
+}
+/*# sourceMappingURL=Login.css.map */

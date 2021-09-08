@@ -16,6 +16,6 @@
 
 .button:hover {  
   background: $headerBackground;
-  border: none;
+  border: solid 0.2rem $headerBackground;
   color: $bodyBackground;
 }

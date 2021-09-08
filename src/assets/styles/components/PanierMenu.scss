@@ -1,0 +1,52 @@
+@import '../Variables.scss';
+@import '../App.scss';
+
+.panier-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & li {
+    list-style: none;
+  } 
+
+  & .submenu{
+    position: relative;
+
+    & .panier{
+      display: none;
+      & .panier-table{
+        color: $mainFontColor;
+      }
+    }
+    
+    & img{
+      margin-right: 2.5rem;
+      width: 3.2rem;
+      transition: 400ms;
+      margin: 1rem 2rem 1rem 0rem; 
+
+      &:hover{
+        transform: scale(1.2);
+      }
+
+    }
+
+    &:hover #panier__container{
+      display: block;
+      position: absolute;
+      right:0;
+      top:100%;
+      z-index: 1;
+      padding: 2rem;
+      min-height: 20rem;
+      min-width: 30rem;
+      border-radius: 0.6rem;
+      background-color: $bodyBackground;
+      box-shadow: 0rem 0rem 10rem 1rem rgba(0, 0, 0, 0.5);
+    }
+    
+  
+  }
+}

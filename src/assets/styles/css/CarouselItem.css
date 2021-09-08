@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap);
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background: #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 100vh;
+}
+
+.carousel-item {
+  background-color: palevioletred;
+  width: 15rem;
+  height: 20rem;
+  border-radius: 2rem;
+  overflow: hidden;
+  margin-right: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: 450ms;
+  transition: 450ms;
+  /*Hago que la transicion sea mas suave y se centre a la izquierda*/
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+  position: relative;
+}
+
+.carousel-item:hover ~ .carousel-item {
+  /*cuando un item este en hover todos los otros sin hover (~) haran lo que dice entre {} */
+  /*Es un selector de hermanos, por ejemplo con
+    div ~ p seleccionamos todos los p hermanos de un div*/
+  -webkit-transform: translate3d(10rem, 0, 0);
+          transform: translate3d(10rem, 0, 0);
+  /*Cuando hacemos hover todos los elementos se desplazaran hacia la derecha*/
+}
+
+.carousel-item img {
+  width: 15rem;
+  /*tamaño del item div*/
+  height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /*La imagen recupera la forma original*/
+}
+
+.carousel-item .carousel-item__details {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+  font-size: 10px;
+  color: white;
+  font-family: 'Muli', sans-serif;
+  opacity: 0;
+  -webkit-transition: 450ms opacity;
+  transition: 450ms opacity;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.carousel-item .carousel-item__details:hover {
+  opacity: 1;
+}
+
+.carousel-item .carousel-item__details img {
+  width: 20px;
+}
+
+.carousel-container:hover .carousel-item {
+  opacity: 0.3;
+}
+
+.carousel-container:hover .carousel-item:hover {
+  /*cuando ambas esten en hover*/
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  opacity: 1;
+}
+/*# sourceMappingURL=CarouselItem.css.map */

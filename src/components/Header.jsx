@@ -1,7 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import PanierMenu from '../components/PanierMenu';
+import UserMenu from '../components/UserMenu';
 import logo from '../assets/statics/icon_logo.png';
-import panier from '../assets/statics/icon_panier2.png';
 import '../assets/styles/components/Header.scss'
 
 const Header = () => {
@@ -13,26 +14,9 @@ const Header = () => {
         </Link>
         <h1> _E-Commerce_ </h1>
       </div>
-      <div className="menu">
-        <ul> 
-          <li className="submenu">
-            <img id="panier-img" src={panier} alt="" />
-            <div id="panier__container"  className="panier">
-              <table className="panier-table">              
-                <thead> 
-                  <tr>
-                    <th>Picture</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
-          </li>
-        </ul>
+      <div className='menu'>        
+        <PanierMenu />
+        <UserMenu />
       </div>
     </header>
   );
