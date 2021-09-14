@@ -1,7 +1,9 @@
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap);
 
 // Theme Font 
 $themeFont : 'Noto Sans', sans-serif;
+$secondaryFont : 'Dancing Script', cursive;
 
 // Fonts colors
 $mainFontColor: #3b3936;
@@ -23,8 +25,15 @@ $fontSize: (
 }
 
 // Background Colors
+
 $whiteBackground: white;
 $bodyBackground: #f0f0f0;
-$grayBackground: #84828F;
-$intermidiateBackg: #BE2D3F;
-$headerBackground: #BA1F33; 
+$blueBackground: #40d3dc; 
+// $intermidiateBackg: #BE2D3F;
+$headerBackground: #84828F;
+
+// $whiteBackground: white;
+// $bodyBackground: #f0f0f0;
+// $grayBackground: #84828F;
+// $intermidiateBackg: #BE2D3F;
+// $headerBackground: #BA1F33; 

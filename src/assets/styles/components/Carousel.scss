@@ -15,4 +15,12 @@
     margin: 2rem 0px;
     padding-bottom: 1rem; /*para que no se corte la img cuando hacemos hover*/
   }
+
+  & h2 {
+    font-family: $secondaryFont;
+    font-size: fontSize(xlarge);
+    padding-left: 3.3rem;
+    border-bottom: 0.4rem solid $blueBackground;
+    color: $ligthFontColor;
+  }
 }
