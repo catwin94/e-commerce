@@ -4,12 +4,24 @@
 .slider{
   // width: 800px;
   width: 100%;
-  height: 65rem;
+  height: 67rem;
   // border-radius: 0.5rem;
   padding-top: 1rem;
   // margin: 1rem 2rem;
   overflow: hidden;
   background: $blueBackground;
+
+  & .offers{
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1px;
+    padding-top: 4px;
+    & h2 {
+      color: $secondaryFontColor;
+      font-weight:590;
+    }
+  }
+
 }
 
 .slides{
@@ -36,6 +48,7 @@
   // width: 800px;
   width: 100%;
   height: 630px;
+  object-fit: cover;
   // border-radius: 5rem;
 }
 

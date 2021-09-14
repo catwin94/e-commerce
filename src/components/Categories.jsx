@@ -1,12 +1,15 @@
 import React from 'react';
 import '../assets/styles/components/Categories.scss'
 
-const Categories = ({children}) => {
+const Categories = (props) => {
   return (  
     <div className='carousel-container'>
-      <h1 className='title'>
-      </h1>
-      {children}
+      <div className='title'>
+        <h1 >
+          {props.titulo}
+        </h1>
+      </div>
+      {props.children}
     </div>
   );
 }

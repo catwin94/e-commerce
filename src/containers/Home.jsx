@@ -9,8 +9,8 @@ const Home = () => {
     <Fragment>
       
       <SiderBar />
-
-      <Categories>
+      
+      <Categories titulo="Curso de Cocina">
         <Carousel>
           <CarouselItem/>
           <CarouselItem/>
@@ -18,15 +18,21 @@ const Home = () => {
           <CarouselItem/>
           <CarouselItem/>
         </Carousel>
+      </Categories>
 
+      <Categories titulo="Curso de Música">
         <Carousel>
           <CarouselItem/>
         </Carousel>
+      </Categories>
 
+      <Categories titulo="Curso de Programación">
         <Carousel>
           <CarouselItem/>
         </Carousel>
+      </Categories>  
 
+      <Categories titulo="Cursos Varios">
         <Carousel>
           <CarouselItem/>
         </Carousel>

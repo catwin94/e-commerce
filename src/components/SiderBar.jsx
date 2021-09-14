@@ -5,10 +5,7 @@ import img2 from '../assets/courses/cook/asian_cook.jpg';
 import img3 from '../assets/courses/cook/home_pasta_cook.jpg';
 import img4 from '../assets/courses/cook/vegan_cokkies_cook.jpg';
 
-const SiderBar = () => {
-
-  
-
+const SiderBar = (props) => {
   return (  
     <div className="slider">
       <div className="slides">
@@ -48,6 +45,12 @@ const SiderBar = () => {
           <label htmlFor="radio4" className="manual-btn" ></label>
         </div>
         {/* <!-- manual navigation end --> */}
+      </div>
+      <div className="offers">
+        <h2>
+          30% OFF desde $500 de compra!
+          {/* {this.props.offers} */}
+        </h2>
       </div>
     </div>
   );

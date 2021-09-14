@@ -18,7 +18,7 @@ $fontSize: (
   "normal": 1.5rem,
   "large": 2rem,
   "xlarge": 2.3rem,
-  "xxlarge": 8rem,
+  "xxlarge": 5rem,
 );
 @function fontSize($name){
   @return map-get($fontSize, $name);
