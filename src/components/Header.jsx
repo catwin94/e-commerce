@@ -8,7 +8,7 @@ import '../assets/styles/components/Header.scss';
 
 const Header = () => {
   return (  
-    <header className="header">
+    <header className="header sticky">
       <div className="logo">
         <Link to="/">
         <img src={logo} alt="" />

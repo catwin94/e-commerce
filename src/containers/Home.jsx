@@ -13,6 +13,10 @@ const Home = () => {
       <Categories>
         <Carousel>
           <CarouselItem/>
+          <CarouselItem/>
+          <CarouselItem/>
+          <CarouselItem/>
+          <CarouselItem/>
         </Carousel>
 
         <Carousel>

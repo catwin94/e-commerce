@@ -1,0 +1,65 @@
+@import '../Variables.scss';
+@import '../App.scss';
+/* BUTTON --------------------------------------------------------------------------------------------------------*/
+/* Button arrowButton and span general characteristics */
+.arrowButton{
+  position: relative;
+  border: none;
+  padding: 30px;
+  border-radius: 50%;
+  margin: 10px;
+  background: $blueBackground;
+  display: flex;
+  align-items: center;
+  transition: 200ms;
+}
+.arrowButton:active {
+  background-color: $blueBackground;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  /* box-shadow: 1px 1px #666; */
+  transform: translateY(1px);
+}
+.arrowButton:hover{
+  scale: 1.2;
+  background: $ligthBackground;
+  /* opacity: 0.7; */
+}
+.arrowButton span{
+  position: absolute;
+  /* right: 18px; */
+  width: 15px;
+  height: 15px;
+  border: solid 4px $secondaryFontColor;
+  transition: .8s;
+  /* transform: translateY(-50%) rotate(-45deg); */
+  transform: rotate(-45deg);
+}
+.arrowButton:hover span{
+  border: solid 4px $blueBackground;
+}
+
+/* Button arrowButton buttonNext course */
+.arrowButton .buttonNext{
+  right: 21px;
+  border: solid 4px $secondaryFontColor;
+  border-top: none;
+  border-left: none;
+}
+.arrowButton:hover .buttonNext{
+  border-top: none;
+  border-left: none;
+  transform: rotate(-405deg);
+}
+
+/* Button arrowButton buttonPrevious course */
+.arrowButton .buttonPrevious{
+  right: 17px;
+  border: solid 4px $secondaryFontColor;
+  border-bottom: none;
+  border-right: none;
+}
+.arrowButton:hover .buttonPrevious{
+  border-bottom: none;
+  border-right: none; 
+  transform: rotate(315deg);
+}

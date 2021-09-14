@@ -6,8 +6,13 @@
   /* display: flex;
   flex-flow: column;
   align-items: center; */
-  display: block;
+  // display: block;
   padding: 3rem;  
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
   
   & h1{
     color: $secondaryFontColor;
@@ -15,4 +20,3 @@
     font-size: fontSize(large);
   }
 }
-
