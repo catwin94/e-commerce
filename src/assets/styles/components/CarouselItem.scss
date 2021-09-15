@@ -1,103 +1,12 @@
 @import '../Variables.scss';
 @import '../App.scss';
 
-// .carousel-item{
-//   background-color: palevioletred;
-//   width: 15rem;
-//   height: 20rem;
-//   border-radius: 1rem;
-//   overflow: hidden;
-//   margin-right: 1rem;
-//   display: inline-block;
-//   cursor: pointer;
-//   transition: 450ms; /*Hago que la transicion sea mas suave y se centre a la izquierda*/
-//   transform-origin: center left;
-//   position: relative;
-
-//   &:hover ~ .carousel-item{
-//     /*cuando un item este en hover todos los otros sin hover (~) haran lo que dice entre {} */
-//     /*Es un selector de hermanos, por ejemplo con
-//     div ~ p seleccionamos todos los p hermanos de un div*/
-//     transform: translate3d(10rem, 0, 0);/*Cuando hacemos hover todos los elementos se desplazaran hacia la derecha*/
-//   }
-
-//   & img{
-//     width: 15rem; /*tamaño del item div*/
-//     height: 20rem;
-//     object-fit: cover; /*La imagen recupera la forma original*/
-//   }
-
-//   & .carousel-item__details{
-//     // background: linear-gradient(to top, rgba(0,0,0,0.4) 0% , rgba(0,0,0,0) 100%);
-//     background: linear-gradient(to top, $headerBackground 0% , transparent 100%);
-//     font-size: 10px;
-//     color: white;
-//     font-family: $themeFont;
-//     opacity: 0;
-//     transition: 450ms opacity;
-//     padding: 1rem;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-end;
-  
-//     &:hover{
-//       opacity: 1;
-//     }
-  
-//     & img{
-//       width: 2.5rem;
-//       height: 2.5rem;
-//       padding: 0.2rem;
-//     }
-  
-//   }
-
-// }
-
-
-
-// .carousel-item__details--title{
-//   margin-bottom: 0px;
-//   font-family: $themeFont;
-//   font-weight: bold;
-//   letter-spacing: 0.1rem;
-// }
-// .carousel-item__details--subtitle{
-//   margin-top: 0.3rem;
-// }
-
-
-
-
-
-
-
-
-
-// .carousel-container:hover .carousel-item{
-//   opacity: 0.3;
-
-//   &:hover{
-//     /*cuando ambas esten en hover*/
-//     transform: scale(1.4);
-//     opacity: 1;
-//   }
-// }
-
-
-
-
 /* Items or slides------------------------------------------------------------------------------------------------ */
 .slide-item{
   // background: greenyellow;
   // border: greenyellow 2px solid;
-  margin-left: 44px;
-  width:330px;
+  margin-left: 11px;
+  // width:330px;
   /* transition: 2s; */
   overflow: hidden;
   display: inline-block;
@@ -123,7 +32,7 @@
   opacity: 0.3;
 }
 .slide-container:hover .slide-item:hover{
-  transform: scale(1.12);
+  transform: scale(1.05);
   opacity: 1;
 }
 
@@ -139,17 +48,22 @@
   position: absolute;
   top: 0;
   left: 0;
-  right: 35px;
+  right: 34px;
   bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 .slide-item-details img{
-  width: 40px;
-  height: 40px;
-  margin-right: 5px;
+  width: 35px;
+  height: 35px;
+  margin-right: 8px;
+  transition: 0.2s;
 }
+.slide-item-details img:hover{
+  scale: 1.2;
+}
+
 .slide-item-details:hover{
   opacity: 1;
 }

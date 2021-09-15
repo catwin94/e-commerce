@@ -1,34 +1,6 @@
 @import '../Variables.scss';
 @import '../App.scss';
 
-// /* Carousel styles */
-// .carousel{
-//   // background: linear-gradient($bodyBackground, $headerBackground);
-//   width: inherit;
-//   overflow: scroll;
-//   padding: 3rem;
-//   overflow-x: hidden;
-//   overflow-y: hidden;
-//   position: relative;/*Todos los elementos que esten dentro de el, se ubicaran de forma relativa a el padre (carousel)*/
-//   & .carousel-container{
-//     white-space: nowrap; /*No manda las cosas al siguiente renglon cuando se queda sin espacio*/
-//     margin: 2rem 0px;
-//     padding-bottom: 1rem; /*para que no se corte la img cuando hacemos hover*/
-//   }
-
-//   & h2 {
-//     font-family: $secondaryFont;
-//     font-size: fontSize(xlarge);
-//     padding-left: 3.3rem;
-//     border-bottom: 0.4rem solid $blueBackground;
-//     color: $ligthFontColor;
-//   }
-// }
-
-
-
-
-
 /* Main container: slider-window and buttons------------------------------------------------------------------------ */
 .slider-container{
   display: flex;
@@ -43,7 +15,7 @@
 /* Window to see slides--------------------------------------------------------------------------------------------- */
 /* Note: the slider width is related with the slide-item width times slides shows in the window */
 .slider-window{
-  width: 1500px;
+  width: 1600px;
   height: 500px;
   // background: palevioletred;
   overflow-x: hidden;
@@ -55,10 +27,10 @@
 
 /* Container with all slides--------------------------------------------------------------------------------------- */
 .slide-container{
-  width: 1860px;
+  width: 1980px;
   height: 400px;
   display: flex;
   flex-flow: row;
-  /* background: pink; */
+  // background: pink;
   transition: 1.4s;
 }

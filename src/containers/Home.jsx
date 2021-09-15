@@ -5,36 +5,38 @@ import CarouselItem from '../components/CarouselItem';
 import SiderBar from '../components/SiderBar';
 
 const Home = () => {
+  const itemWidth = 310;
   return (  
     <Fragment>
       
       <SiderBar />
       
       <Categories titulo="Curso de Cocina">
-        <Carousel>
-          <CarouselItem/>
-          <CarouselItem/>
-          <CarouselItem/>
-          <CarouselItem/>
-          <CarouselItem/>
+        <Carousel itemWidth={itemWidth}>
+          <CarouselItem itemWidth={itemWidth} />
+          <CarouselItem itemWidth={itemWidth} />
+          <CarouselItem itemWidth={itemWidth} />
+          <CarouselItem itemWidth={itemWidth} />
+          <CarouselItem itemWidth={itemWidth} />
+          <CarouselItem itemWidth={itemWidth} />
         </Carousel>
       </Categories>
 
       <Categories titulo="Curso de Música">
-        <Carousel>
-          <CarouselItem/>
+        <Carousel itemWidth={itemWidth}>
+          <CarouselItem itemWidth={itemWidth} />
         </Carousel>
       </Categories>
 
       <Categories titulo="Curso de Programación">
-        <Carousel>
-          <CarouselItem/>
+        <Carousel itemWidth={itemWidth}>
+          <CarouselItem itemWidth={itemWidth} />
         </Carousel>
       </Categories>  
 
       <Categories titulo="Cursos Varios">
-        <Carousel>
-          <CarouselItem/>
+        <Carousel itemWidth={itemWidth}>
+          <CarouselItem itemWidth={itemWidth} />
         </Carousel>
       </Categories>
     </Fragment>

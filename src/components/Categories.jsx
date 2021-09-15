@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import '../assets/styles/components/Categories.scss'
 
 const Categories = (props) => {
+
   return (  
     <div className='carousel-container'>
       <div className='title'>
@@ -9,7 +10,10 @@ const Categories = (props) => {
           {props.titulo}
         </h1>
       </div>
-      {props.children}
+      <Fragment>
+        {props.children}
+      </Fragment>
+      
     </div>
   );
 }

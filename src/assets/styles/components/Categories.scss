@@ -3,14 +3,8 @@
 
 .carousel-container{
   flex: 1; /*ocupa todo el ancho disponible => flex: 1 1 auto*/
-  /* display: flex;
-  flex-flow: column;
-  align-items: center; */
-  // display: block;
   padding: 3rem;  
-
   // border: solid 2px blue;
-
   display: flex;
   flex-flow: column;
   justify-content: center;
