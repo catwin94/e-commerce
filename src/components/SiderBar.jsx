@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import '../assets/styles/components/SiderBar.scss';
 import img1 from '../assets/courses/cook/french_cook.jpg';
 import img2 from '../assets/courses/cook/asian_cook.jpg';
@@ -6,10 +6,23 @@ import img3 from '../assets/courses/cook/home_pasta_cook.jpg';
 import img4 from '../assets/courses/cook/vegan_cokkies_cook.jpg';
 
 const SiderBar = (props) => {
+
+  let counter = 1;
+  setInterval(
+    function(){
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if(counter > 4){
+        counter = 1; 
+      }
+    },
+    5000
+  );
+
   return (  
     <div className="slider">
       <div className="slides">
-        {/* <!-- radio buttons start --> */}
+        {/* <!-- radio buttons start --> */}        
         <input type="radio" name="radio-btn" id="radio1" />
         <input type="radio" name="radio-btn" id="radio2" />
         <input type="radio" name="radio-btn" id="radio3" />
@@ -39,17 +52,16 @@ const SiderBar = (props) => {
         {/* <!-- automatic navigation end -->
         <!-- manual navigation start .. linked with radio btn id --> */}
         <div className="navigation-manual">
-          <label htmlFor="radio1" className="manual-btn" ></label>
-          <label htmlFor="radio2" className="manual-btn" ></label>
-          <label htmlFor="radio3" className="manual-btn" ></label>
-          <label htmlFor="radio4" className="manual-btn" ></label>
+          <label htmlFor="radio1" className="manual-btn" onClick={ ()=>{counter = 1}} ></label>
+          <label htmlFor="radio2" className="manual-btn" onClick={ ()=>{counter = 2}} ></label>
+          <label htmlFor="radio3" className="manual-btn" onClick={ ()=>{counter = 3}} ></label>
+          <label htmlFor="radio4" className="manual-btn" onClick={ ()=>{counter = 4}} ></label>
         </div>
         {/* <!-- manual navigation end --> */}
       </div>
       <div className="offers">
         <h2>
-          30% OFF desde $500 de compra!
-          {/* {this.props.offers} */}
+          {props.offer}
         </h2>
       </div>
     </div>

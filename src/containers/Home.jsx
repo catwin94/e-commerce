@@ -6,10 +6,11 @@ import SiderBar from '../components/SiderBar';
 
 const Home = () => {
   const itemWidth = 310;
+  const offer = "30% Off Your Purchase Of $80! | Code:FDSE21";
   return (  
-    <Fragment>
+    <Fragment >
       
-      <SiderBar />
+      <SiderBar offer={offer} />
       
       <Categories titulo="Curso de Cocina">
         <Carousel itemWidth={itemWidth}>
