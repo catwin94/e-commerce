@@ -1,26 +1,34 @@
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap);
 
-// Theme Font 
-$themeFont : 'Noto Sans', sans-serif;
-$secondaryFont : 'Dancing Script', cursive;
+//Colors
+$whiteColor: #f0f0f0;
+$ligthGrayColor: rgb(197, 197, 197);
+$grayColor: #84828f;
+$darkGrayColor: #3b3936;
+$blueColor: #40d3dc;
+$redFontColor: #ba1f33;
+
+// Theme Font
+$themeFont: "Noto Sans", sans-serif;
+$secondaryFont: "Dancing Script", cursive;
 
 // Fonts colors
 $mainFontColor: #3b3936;
 $secondaryFontColor: #f0f0f0;
-$ligthFontColor: #84828F;
-$redFontColor: #BA1F33;
+$ligthFontColor: #84828f;
+$redFontColor: #ba1f33;
 
 // Fonts size
 $fontSize: (
-  "regular":0.5rem,
+  "regular": 0.5rem,
   "medium": 1.3rem,
   "normal": 1.5rem,
   "large": 2rem,
   "xlarge": 2.3rem,
   "xxlarge": 5rem,
 );
-@function fontSize($name){
+@function fontSize($name) {
   @return map-get($fontSize, $name);
 }
 
@@ -28,13 +36,13 @@ $fontSize: (
 
 $whiteBackground: white;
 $bodyBackground: #f0f0f0;
-$blueBackground: #40d3dc; 
+$blueBackground: #40d3dc;
 // $intermidiateBackg: #BE2D3F;
-$headerBackground: #84828F;
+$headerBackground: #84828f;
 $ligthBackground: rgb(197, 197, 197);
 
 // $whiteBackground: white;
 // $bodyBackground: #f0f0f0;
 // $grayBackground: #84828F;
 // $intermidiateBackg: #BE2D3F;
-// $headerBackground: #BA1F33; 
+// $headerBackground: #BA1F33;

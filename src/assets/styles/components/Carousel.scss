@@ -1,5 +1,6 @@
 @import "../Variables.scss";
 @import "../App.scss";
+// @import "../Media.scss";
 
 /* Main container: slider-window and buttons------------------------------------------------------------------------ */
 .slider-container {
@@ -28,7 +29,7 @@
 /* Container with all slides--------------------------------------------------------------------------------------- */
 .slide-container {
   width: 1980px;
-  height: 400px;
+  height: 350px;
   display: flex;
   flex-flow: row;
   // background: pink;

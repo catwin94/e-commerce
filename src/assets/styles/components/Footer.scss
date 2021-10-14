@@ -1,8 +1,9 @@
-@import '../Variables.scss';
-@import '../App.scss';
+@import "../Variables.scss";
+@import "../App.scss";
+@import "../Media.scss";
 
 /* --------Footer-------- */
-.footer{
+.footer {
   background: $headerBackground;
   color: $secondaryFontColor;
   text-align: center;
@@ -18,7 +19,7 @@
   height: 10rem;
   width: 100%;
 
-  & a{
+  & a {
     color: $secondaryFontColor;
     font-family: $themeFont;
     text-decoration: none;
@@ -26,7 +27,7 @@
     font-size: 1.4rem;
     padding-left: 3rem;
 
-    &:hover{
+    &:hover {
       text-decoration: underline;
     }
   }

@@ -15,37 +15,61 @@ const Home = () => {
     <Fragment>
       <SiderBar offer={offer} />
 
-      <Categories titulo="Curso de Cocina">
+      <Categories titulo="Cooking Courses">
         <Carousel itemWidth={itemWidth}>
           {carouselList
-            .filter((item) => item.category === "Cocina")
+            .filter(
+              (item) => item.category.toLowerCase() === "Cocina".toLowerCase()
+            )
             .map((item, key) => (
               <CarouselItem
                 key={key}
                 itemWidth={itemWidth}
-                title={item.category}
+                title={item.title}
                 description={item.shortDescription}
+                pictureLink={item.pictureLink}
                 item={item}
               />
             ))}
         </Carousel>
       </Categories>
 
-      <Categories titulo="Curso de Música">
+      <Categories titulo="Music Courses">
         <Carousel itemWidth={itemWidth}>
-          <CarouselItem itemWidth={itemWidth} />
+          {carouselList
+            .filter(
+              (item) => item.category.toLowerCase() === "Musica".toLowerCase()
+            )
+            .map((item, key) => (
+              <CarouselItem
+                key={key}
+                itemWidth={itemWidth}
+                title={item.title}
+                description={item.shortDescription}
+                pictureLink={item.pictureLink}
+                item={item}
+              />
+            ))}
         </Carousel>
       </Categories>
 
-      <Categories titulo="Curso de Programación">
+      <Categories titulo="Programming Courses">
         <Carousel itemWidth={itemWidth}>
-          <CarouselItem itemWidth={itemWidth} />
-        </Carousel>
-      </Categories>
-
-      <Categories titulo="Cursos Varios">
-        <Carousel itemWidth={itemWidth}>
-          <CarouselItem itemWidth={itemWidth} />
+          {carouselList
+            .filter(
+              (item) =>
+                item.category.toLowerCase() === "Programacion".toLowerCase()
+            )
+            .map((item, key) => (
+              <CarouselItem
+                key={key}
+                itemWidth={itemWidth}
+                title={item.title}
+                description={item.shortDescription}
+                pictureLink={item.pictureLink}
+                item={item}
+              />
+            ))}
         </Carousel>
       </Categories>
     </Fragment>

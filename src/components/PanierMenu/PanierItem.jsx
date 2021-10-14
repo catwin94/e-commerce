@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { styles } from "./Panier.styles.js";
+// import { styles } from "./Panier.styles.js";
 import { useDispatch } from "react-redux";
 import {
   addCourse,
@@ -10,6 +10,7 @@ import {
 import "../../assets/styles/components/DeleteButton.scss";
 
 const PanierItem = (props) => {
+  const { styles } = props;
   //Testing bototes add and delete
   // const [count, setCount] = useState(props.quantity);
   const dispatch = useDispatch();
@@ -17,10 +18,7 @@ const PanierItem = (props) => {
   return (
     <div style={styles.table.divTableRow}>
       <div style={styles.table.divTableCell}>
-        <img
-          style={styles.table.imgItem}
-          src="https://images.pexels.com/photos/6794851/pexels-photo-6794851.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-        />
+        <img style={styles.table.imgItem} src={props.link} />
       </div>
       <div style={styles.table.divTableCell}>{props.description}</div>
       <div style={styles.table.divTableCell}>${props.price}</div>

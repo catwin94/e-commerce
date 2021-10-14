@@ -1,8 +1,9 @@
-@import '../Variables.scss';
-@import '../App.scss';
+@import "../Variables.scss";
+@import "../App.scss";
+@import "../Media.scss";
 /* BUTTON --------------------------------------------------------------------------------------------------------*/
 /* Button arrowButton and span general characteristics */
-.arrowButton{
+.arrowButton {
   position: relative;
   border: none;
   padding: 30px;
@@ -19,47 +20,47 @@
   /* box-shadow: 1px 1px #666; */
   transform: translateY(1px);
 }
-.arrowButton:hover{
+.arrowButton:hover {
   scale: 1.2;
   background: $ligthBackground;
   /* opacity: 0.7; */
 }
-.arrowButton span{
+.arrowButton span {
   position: absolute;
   /* right: 18px; */
   width: 15px;
   height: 15px;
   border: solid 4px $secondaryFontColor;
-  transition: .8s;
+  transition: 0.8s;
   /* transform: translateY(-50%) rotate(-45deg); */
   transform: rotate(-45deg);
 }
-.arrowButton:hover span{
+.arrowButton:hover span {
   border: solid 4px $blueBackground;
 }
 
 /* Button arrowButton buttonNext course */
-.arrowButton .buttonNext{
+.arrowButton .buttonNext {
   right: 21px;
   border: solid 4px $secondaryFontColor;
   border-top: none;
   border-left: none;
 }
-.arrowButton:hover .buttonNext{
+.arrowButton:hover .buttonNext {
   border-top: none;
   border-left: none;
   transform: rotate(-405deg);
 }
 
 /* Button arrowButton buttonPrevious course */
-.arrowButton .buttonPrevious{
+.arrowButton .buttonPrevious {
   right: 17px;
   border: solid 4px $secondaryFontColor;
   border-bottom: none;
   border-right: none;
 }
-.arrowButton:hover .buttonPrevious{
+.arrowButton:hover .buttonPrevious {
   border-bottom: none;
-  border-right: none; 
+  border-right: none;
   transform: rotate(315deg);
 }

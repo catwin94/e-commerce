@@ -1,6 +1,6 @@
 import React from "react";
 import PanierItem from "./PanierItem";
-import { styles } from "./Panier.styles.js";
+// import { styles } from "./Panier.styles.js";
 import { useSelector } from "react-redux";
 
 // const itemList = [
@@ -16,7 +16,7 @@ import { useSelector } from "react-redux";
 //   },
 // ];
 
-const PanierTable = () => {
+const PanierTable = ({ styles }) => {
   const itemList = useSelector((state) => state.panier.list);
 
   return (
@@ -37,11 +37,13 @@ const PanierTable = () => {
           {itemList.map((item, key) => {
             return (
               <PanierItem
+                styles={styles}
                 key={key}
                 description={item.description}
                 price={item.price}
                 quantity={item.quantity}
                 id={item.id}
+                link={item.pictureLink}
               />
             );
           })}

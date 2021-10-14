@@ -1,8 +1,9 @@
-@import '../Variables.scss';
-@import '../App.scss';
+@import "../Variables.scss";
+@import "../App.scss";
+@import "../Media.scss";
 
 /* --------Header-------- */
-.header{
+.header {
   // position: relative;
   height: 7rem;
   display: flex;
@@ -16,29 +17,26 @@
   color: $secondaryFontColor;
   font-size: fontSize(medium);
 
-  & .logo{
+  & .logo {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
 
-    & img{
+    & img {
       width: 4rem;
     }
 
-    & h1{
+    & h1 {
       text-decoration: underline 0.2rem;
       font-size: fontSize(xlarge);
       margin-left: 1rem;
     }
 
-    & .logoName{
+    & .logoName {
       width: 14rem;
       margin-left: 2rem;
     }
   }
-
-
 
   /* Menu */
   & .menu {
@@ -46,15 +44,12 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
-
   }
-  
 }
 
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   z-index: 1;

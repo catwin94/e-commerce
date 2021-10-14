@@ -20,141 +20,276 @@ const fontSize = {
   xxlarge: "5rem",
 };
 
+const containerStyle = {
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+  alignItems: "flex-end",
+  paddingTop: "10px",
+};
+
 export const styles = {
   //Panier
-  panier: {
-    panierContainer: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "flex-end",
-      paddingTop: "10px",
-    },
-    panierImg: {
-      width: "70px",
-      height: "68px",
-      padding: "4px 10px 20px 15px",
-      transition: "200ms",
-    },
+  panierGlobal: {
+    panier: {
+      panierContainer: containerStyle,
+      panierImg: {
+        width: "70px",
+        height: "68px",
+        padding: "4px 10px 20px 15px",
+        transition: "200ms",
+      },
 
-    panierImgHovered: {
-      width: "70px",
-      height: "68px",
-      padding: "4px 10px 20px 15px",
-      transition: "200ms",
-      scale: "1.1",
+      panierImgHovered: {
+        width: "70px",
+        height: "68px",
+        padding: "4px 10px 20px 15px",
+        transition: "200ms",
+        scale: "1.1",
+      },
     },
-  },
-  //Table
-  table: {
-    divTableContainer: {
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      color: whiteColor,
-      // border: "solid 2px green",
-      boxShadow: "0px 0px 20px 10px rgba(0,0,0,0.4)",
-      // boxShadow: "0px 0px 21px 4px rgba(64,211,220,0.55)",
-      background: whiteColor,
-      fontWeight: "bold",
-      color: darkGrayColor,
-      borderRadius: "10px",
-      padding: "10px 10px",
-      position: "absolute",
-      top: "70px",
-      right: "80px",
-    },
-    //<table> element
-    divTable: {
-      display: "table",
-      width: "10px",
-      height: "10px",
-      overflowY: "auto",
-      overflowX: "auto",
-      // borderRadius: "10px",
-      // overflow: "hidden",
-      borderCollapse: "collapse",
-      // border: "1px solid white",
-    },
-    //<thead> element
-    divTableHeading: {
-      display: "table-header-group",
-      width: "100%",
-      tableLayout: "fixed",
-      // color: grayColor,
-    },
+    //Table
+    table: {
+      divTableContainer: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        // border: "solid 2px green",
+        boxShadow: "0px 0px 20px 10px rgba(0,0,0,0.4)",
+        // boxShadow: "0px 0px 21px 4px rgba(64,211,220,0.55)",
+        background: "red",
+        fontWeight: "bold",
+        color: darkGrayColor,
+        borderRadius: "10px",
+        padding: "10px 10px",
+        position: "absolute",
+        top: "70px",
+        right: "80px",
+      },
+      //<table> element
+      divTable: {
+        display: "table",
+        width: "10px",
+        height: "10px",
+        overflowY: "auto",
+        overflowX: "auto",
+        // borderRadius: "10px",
+        // overflow: "hidden",
+        borderCollapse: "collapse",
+        // border: "1px solid white",
+      },
+      //<thead> element
+      divTableHeading: {
+        display: "table-header-group",
+        width: "100%",
+        tableLayout: "fixed",
+        // color: grayColor,
+      },
 
-    //<tbody> element
-    divTableBody: {
-      display: "table-row-group",
-      width: "100%",
-      tableLayout: "fixed",
-      // height: "10px",
-      overflow: "auto",
-      // overflowX: "hidden",
-    },
-    /* <tfoot> element */
-    divTableFoot: {
-      display: "table-footer-group",
-      fontWeight: "bold",
-    },
+      //<tbody> element
+      divTableBody: {
+        display: "table-row-group",
+        width: "100%",
+        tableLayout: "fixed",
+        // height: "10px",
+        overflow: "auto",
+        // overflowX: "hidden",
+      },
+      /* <tfoot> element */
+      divTableFoot: {
+        display: "table-footer-group",
+        fontWeight: "bold",
+      },
 
-    /* <tr> element */
-    divTableRow: {
-      display: "table-row",
-      borderBottom: `2px solid ${whiteColor}`,
-      textAlign: "center",
-      background: ligthGrayColor,
-      // width: "100%",
-      // tableLayout: "fixed",
-    },
+      /* <tr> element */
+      divTableRow: {
+        display: "table-row",
+        borderBottom: `2px solid ${whiteColor}`,
+        textAlign: "center",
+        background: ligthGrayColor,
+        // width: "100%",
+        // tableLayout: "fixed",
+      },
 
-    /* <td> element */
-    divTableHead: {
-      display: "table-cell",
-      background: blueColor,
-      padding: "3px 10px",
-      // width: "100px",
-    },
-    divTableCell: {
-      display: "table-cell",
+      /* <td> element */
+      divTableHead: {
+        display: "table-cell",
+        background: blueColor,
+        padding: "3px 10px",
+        // width: "100px",
+      },
+      divTableCell: {
+        display: "table-cell",
 
-      textAlign: "center",
-      verticalAlign: "middle",
-      padding: "3px 10px",
-    },
+        textAlign: "center",
+        verticalAlign: "middle",
+        padding: "3px 10px",
+      },
 
-    /* Otros */
-    imgItem: {
-      width: "100px",
+      /* Otros */
+      imgItem: {
+        width: "100px",
+      },
     },
-  },
-  //Button
-  button: {
-    container: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
-      width: "55px",
-    },
+    //Button
     button: {
-      width: "25px",
-      height: "25px",
-      borderRadius: "20px",
-      backgroundColor: blueColor,
-      // border: "none",
-      transition: "200ms",
+      container: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        width: "55px",
+      },
+      button: {
+        width: "25px",
+        height: "25px",
+        borderRadius: "20px",
+        backgroundColor: blueColor,
+        // border: "none",
+        transition: "200ms",
+      },
+      divContainer: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      },
+      span: {
+        width: "11px",
+        position: "absolute",
+        border: "1px solid white",
+      },
     },
-    divContainer: {
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
+  },
+  panierMobile: {
+    panier: {
+      panierContainer: containerStyle,
+      panierImg: {
+        width: "70px",
+        height: "68px",
+        padding: "4px 10px 20px 15px",
+        transition: "200ms",
+      },
+
+      panierImgHovered: {
+        width: "70px",
+        height: "68px",
+        padding: "4px 10px 20px 15px",
+        transition: "200ms",
+        scale: "1.1",
+      },
     },
-    span: {
-      width: "11px",
-      position: "absolute",
-      border: "1px solid white",
+    //Table
+    table: {
+      divTableContainer: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        color: whiteColor,
+        // border: "solid 2px green",
+        boxShadow: "0px 0px 20px 10px rgba(0,0,0,0.4)",
+        // boxShadow: "0px 0px 21px 4px rgba(64,211,220,0.55)",
+        // background: whiteColor,
+        background: "blue",
+        fontWeight: "bold",
+        color: darkGrayColor,
+        borderRadius: "10px",
+        padding: "10px 10px",
+        position: "absolute",
+        top: "70px",
+        right: "80px",
+      },
+      //<table> element
+      divTable: {
+        display: "table",
+        width: "10px",
+        height: "10px",
+        overflowY: "auto",
+        overflowX: "auto",
+        // borderRadius: "10px",
+        // overflow: "hidden",
+        borderCollapse: "collapse",
+        // border: "1px solid white",
+      },
+      //<thead> element
+      divTableHeading: {
+        display: "table-header-group",
+        width: "100%",
+        tableLayout: "fixed",
+        // color: grayColor,
+      },
+
+      //<tbody> element
+      divTableBody: {
+        display: "table-row-group",
+        width: "100%",
+        tableLayout: "fixed",
+        // height: "10px",
+        overflow: "auto",
+        // overflowX: "hidden",
+      },
+      /* <tfoot> element */
+      divTableFoot: {
+        display: "table-footer-group",
+        fontWeight: "bold",
+      },
+
+      /* <tr> element */
+      divTableRow: {
+        display: "table-row",
+        borderBottom: `2px solid ${whiteColor}`,
+        textAlign: "center",
+        background: ligthGrayColor,
+        // width: "100%",
+        // tableLayout: "fixed",
+      },
+
+      /* <td> element */
+      divTableHead: {
+        display: "table-cell",
+        background: blueColor,
+        padding: "3px 10px",
+        // width: "100px",
+      },
+      divTableCell: {
+        display: "table-cell",
+
+        textAlign: "center",
+        verticalAlign: "middle",
+        padding: "3px 10px",
+      },
+
+      /* Otros */
+      imgItem: {
+        width: "100px",
+      },
+    },
+    //Button
+    button: {
+      container: {
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        width: "55px",
+      },
+      button: {
+        width: "25px",
+        height: "25px",
+        borderRadius: "20px",
+        backgroundColor: blueColor,
+        // border: "none",
+        transition: "200ms",
+      },
+      divContainer: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      },
+      span: {
+        width: "11px",
+        position: "absolute",
+        border: "1px solid white",
+      },
     },
   },
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PanierMenu from "../components/Panier_Menu/PanierMenu";
-import PanierMenu2 from "../components/PanierMenu/PanierMenu";
+import PanierMenu from "./PanierMenu/PanierMenu";
+import PanierMenu2 from "./PanierMenu2/PanierMenu";
 import UserMenu from "../components/UserMenu";
 import logo from "../assets/statics/icon_logo.png";
 import logoName from "../assets/statics/logo2.png";
@@ -15,10 +15,9 @@ const Header = () => {
           <img src={logo} alt="" />
           <img className="logoName" src={logoName} alt="" />
         </Link>
-        {/* <h1> _E-Commerce_ </h1> */}
       </div>
       <div className="menu">
-        <PanierMenu />
+        {/* <PanierMenu /> */}
         <PanierMenu2 />
         {/* <UserMenu /> */}
       </div>

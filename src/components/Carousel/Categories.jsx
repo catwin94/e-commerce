@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+// import "../../assets/styles/Media.scss";
 import "../../assets/styles/components/Categories.scss";
 
 const Categories = (props) => {

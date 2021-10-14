@@ -1,28 +1,19 @@
 import React, { useState, useEffect } from "react";
 import PanierTable from "./PanierTable";
-import PanierItem from "./PanierItem";
 import panierImg from "../../assets/statics/icon_panier2.png";
-import { styles as mediaStyles } from "./Panier.styles";
+import "../../assets/styles/components/panier/Panier.scss";
 
 const mediaQuery = window.matchMedia("(max-width: 767px)");
 const mediaQueryMobile = mediaQuery.matches;
 const PanierMenu = () => {
   const [hover, setHover] = useState(false);
   const [showTable, setShowTable] = useState(false);
-  console.log(mediaQuery.matches);
-  // const [styles, setStyles] = useState(
-  //   mediaQuery.matches ? mediaStyles.panierGlobal : mediaStyles.panierMobile
-  // );
-  const [styles, setStyles] = useState(
-    mediaQuery.matches ? mediaStyles.panierMobile : mediaStyles.panierGlobal
-  );
 
   return (
-    // <div className="panier-container">
-    <div style={styles.panier.panierContainer}>
-      {/* <img className="panier-img" src={panier} /> */}
+    <div className="panierContainer">
       <img
-        style={hover ? styles.panier.panierImgHovered : styles.panier.panierImg}
+        className="panierImg"
+        // style={hover ? styles.panier.panierImgHovered : styles.panier.panierImg}
         onMouseEnter={() => {
           setHover(true);
         }}
@@ -32,7 +23,8 @@ const PanierMenu = () => {
         }}
         src={panierImg}
       />
-      {showTable && <PanierTable styles={styles}></PanierTable>}
+      {showTable && <PanierTable></PanierTable>}
+      {/* {showTable && <PanierTable styles={styles}></PanierTable>} */}
 
       {/* {itemList.length > 0 && ( */}
       {/* {itemList.length > 0 && showTable && (

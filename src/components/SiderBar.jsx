@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import "../assets/styles/components/SiderBar.scss";
-import img1 from "../assets/courses/cook/french_cook.jpg";
-import img2 from "../assets/courses/cook/asian_cook.jpg";
-import img3 from "../assets/courses/cook/home_pasta_cook.jpg";
-import img4 from "../assets/courses/cook/vegan_cokkies_cook.jpg";
 
 const SiderBar = (props) => {
   const [checkNb, setcheckNb] = useState(1);
@@ -20,13 +17,21 @@ const SiderBar = (props) => {
     }, 5000);
   }, []);
 
-  const noop = () => {};
+  const noop = () => {}; // NO OPeration function
 
   //UseEffect: Cuando una variable del array se modifica o cambia de valor, se vuelve a ejecutar el useEffect.
   // Cuando el array esta vacio o el useEffect no depende de ninguna variable, solo se ejecuta una vez cuando se carga el componente.
 
+  const offerList = useSelector((state) =>
+    state.courses.list.filter((item) => item.promotion)
+  );
+
   return (
     <div className="slider">
+      {/* <div className="offers">
+        <h2>{props.offer}</h2>
+      </div> */}
+      {/* <h1 style={{ color: "red" }}> Cursosssss </h1> */}
       <div className="slides">
         {/* <!-- radio buttons start --> */}
         <input
@@ -59,30 +64,22 @@ const SiderBar = (props) => {
         />
         {/* <!-- radio buttons end -->
         <!-- slide images start --> */}
-        <div className="slide first">
-          <img
-            src="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-            alt=""
-          />
-        </div>
-        <div className="slide ">
-          <img
-            src="https://images.pexels.com/photos/3758133/pexels-photo-3758133.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500 "
-            alt=""
-          />
-        </div>
-        <div className="slide ">
-          <img
-            src="https://images.pexels.com/photos/2318966/pexels-photo-2318966.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-            alt=""
-          />
-        </div>
-        <div className="slide ">
-          <img
-            src="https://images.pexels.com/photos/6645913/pexels-photo-6645913.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-            alt=""
-          />
-        </div>
+        {offerList.map((item, key) => {
+          if (key === 0) {
+            return (
+              <div className="slide first" key={key}>
+                <img src={item.pictureLink} alt="" />
+              </div>
+            );
+          } else {
+            return (
+              <div className="slide" key={key}>
+                <img src={item.pictureLink} alt="" />
+              </div>
+            );
+          }
+        })}
+
         {/* <!-- slide images end -->
         <!-- automatic navigation start --> */}
         <div className="navigation-auto">
