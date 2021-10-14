@@ -17,14 +17,6 @@
 }
 
 //Table
-
-.item-a {
-  grid-area: header;
-}
-.item-b {
-  grid-area: main;
-}
-
 .tableContainer {
   display: flex;
   flex-direction: column;
@@ -38,130 +30,71 @@
   padding: 10px 10px;
   position: absolute;
   top: 70px;
-  right: 80px;
+  right: 40px;
 
   & .headingContainer {
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: center;
-    // width: 100%;
-    // background: $blueColor;
-    // & p {
-    //   padding: 3px 23px 3px 27px;
-    // }
     display: grid;
     justify-content: stretch;
     justify-items: center;
     width: 100%;
     background: $blueColor;
-    grid-template-columns: 2.8fr 2.3fr 1fr 1fr 0.8fr;
+    padding: 1.5px 0;
+    border-bottom: 2px solid $whiteColor;
+    grid-template-columns: 2fr 3fr 1.5fr 1.5fr;
     grid-template-rows: auto;
-    grid-template-areas:
-      "header header header header header"
-      "main main main main main";
   }
 
-  //<table> element
-  & .divTable {
-    display: table;
-    // width: 10px;
-    // height: 10px;
-    // overflow-y: auto;
-    // overflow-x: auto;
-    // borderRadius: 10px;
-    // overflow: hidden;
-    border-collapse: collapse;
-    // border: 1px solid white;
+  & .scrollContainer {
+    max-height: 352px;
+    overflow: hidden scroll;
 
-    //<thead> element
-    & .divTableHeading {
-      display: table-header-group;
+    & .bodyContainer {
+      display: grid;
+      justify-content: stretch;
+      justify-items: center;
+      align-items: center;
       width: 100%;
-      table-layout: fixed;
-      // color: grayColor;
-    }
+      grid-template-columns: 2.3fr 3fr 1fr 1fr 0.8fr;
+      grid-template-rows: auto;
+      background: $ligthGrayColor;
+      border-bottom: 2px solid $whiteColor;
+      padding-right: 10px;
+      // & p{}
 
-    //<tbody> element
-  }
-}
-.scrollContainer {
-  max-height: 300px;
-  overflow: hidden scroll;
-  // overflow: hidden;
-  // background-color: red;
+      & .buttonContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 55px;
+        position: relative;
+        & .buttonStyle {
+          width: 25px;
+          height: 25px;
+          border-radius: 20px;
+          background-color: $blueColor;
 
-  & .divTableBody {
-    display: table-row-group;
-    // width: 100%;
-    table-layout: fixed;
-    max-height: 400px;
-    overflow-y: scroll;
-    // overflowX: hidden;
-  }
-}
+          transition: all 200ms ease 0s;
+          & .divContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-// /* <tfoot> element */
-// .divTableFoot {
-//   display: table-footer-group;
-//   font-weight: bold;
-// }
-
-/* <tr> element */
-.divTableRow {
-  display: table-row;
-  border-bottom: 2px solid $whiteColor;
-  text-align: center;
-  background: $ligthGrayColor;
-
-  // width: 100%;
-  // tableLayout: fixed;
-  & .divTableHead {
-    display: table-cell;
-    background: $blueColor;
-    padding: 3px 10px;
-    // width: 100px;
-  }
-
-  /* <td> element */
-
-  & .divTableCell {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    padding: 3px 10px;
-
-    & .imgItem {
-      width: 120px;
-      height: 170px;
-      object-fit: fill;
-    }
-    & .buttonContainer {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 55px;
-      position: relative;
-      & .button {
-        width: 25px;
-        height: 25px;
-        border-radius: 20px;
-        background-color: $blueColor;
-        border: none;
-        box-shadow: 0px 0px 20px 10px rgba(82, 82, 82, 0.2);
-        transition: 200ms;
-        & .divContainer {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          & span {
-            width: 11px;
-            position: absolute;
-            color: white;
-            font-weight: 800;
+            & span {
+              width: 11px;
+              position: absolute;
+              color: white;
+              font-weight: 800;
+            }
           }
         }
       }
     }
   }
+}
+
+.imgItem {
+  width: 120px;
+  height: 170px;
+  object-fit: fill;
+  padding: 5px;
 }
