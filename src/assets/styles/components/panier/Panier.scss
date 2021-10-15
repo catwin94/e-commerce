@@ -95,6 +95,30 @@
 .imgItem {
   width: 120px;
   height: 170px;
-  object-fit: fill;
+  object-fit: cover;
   padding: 5px;
 }
+
+// div.gallery img {
+//   width: 100%;
+//   height: auto;
+// }
+
+// .responsive {
+//   padding: 0 6px;
+//   float: left;
+//   width: 24.99999%;
+// }
+
+// @media only screen and (max-width: 700px) {
+//   .responsive {
+//     width: 49.99999%;
+//     margin: 6px 0;
+//   }
+// }
+
+// @media only screen and (max-width: 500px) {
+//   .responsive {
+//     width: 100%;
+//   }
+// }

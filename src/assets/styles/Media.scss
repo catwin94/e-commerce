@@ -87,21 +87,25 @@
 
   /* --------Panier-------- */
   .tableContainer {
-    right: 5px;
-    width: 350px;
-
+    padding: 10px 10px;
+    right: 0px;
     & .headingContainer {
       grid-template-columns: 120px 2.5fr 1.7fr 1.5fr;
       padding-right: 20px;
     }
-
     & .scrollContainer {
+      max-height: 312px;
       & .bodyContainer {
         & p {
           padding: 5px;
         }
       }
     }
+  }
+
+  .imgItem {
+    height: 150px;
+    object-fit: cover;
   }
 
   /* --------Carousel-------- */
@@ -164,12 +168,16 @@
     .arrowButton {
       order: 1;
     }
-    // .arrowButton:hover .buttonNext {
-    //   transform: rotate(-45deg);
-    // }
-    // .arrowButton:hover .buttonPrevious {
-    //   transform: rotate(0deg);
-    // }
+    .arrowButton:hover .buttonNext {
+      transform: rotate(-45deg);
+      border-top: none;
+      border-left: none;
+    }
+    .arrowButton:hover .buttonPrevious {
+      transform: rotate(-45deg);
+      border-bottom: none;
+      border-right: none;
+    }
     .arrowButton:hover {
       scale: none;
       background: $blueBackground;
