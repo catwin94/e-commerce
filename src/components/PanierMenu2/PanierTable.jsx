@@ -6,6 +6,10 @@ import "../../assets/styles/components/panier/Panier.scss";
 const PanierTable = () => {
   const itemList = useSelector((state) => state.panier.list);
 
+  function add(accumulator, a) {
+    return accumulator + a;
+  }
+
   return (
     <div className="tableContainer">
       <div className="headingContainer">
@@ -48,6 +52,16 @@ const PanierTable = () => {
           })}
         </div>
       </div> */}
+
+      <div className="totalContainer">
+        <p>Total</p>
+        <p>
+          ${" "}
+          {itemList
+            .map((element) => element.price * element.quantity)
+            .reduce(add, 0)}
+        </p>
+      </div>
     </div>
   );
 };

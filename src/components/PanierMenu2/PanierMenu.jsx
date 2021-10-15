@@ -1,44 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import PanierTable from "./PanierTable";
 import panierImg from "../../assets/statics/icon_panier2.png";
 import "../../assets/styles/components/panier/Panier.scss";
 
-const mediaQuery = window.matchMedia("(max-width: 767px)");
-const mediaQueryMobile = mediaQuery.matches;
 const PanierMenu = () => {
-  const [hover, setHover] = useState(false);
   const [showTable, setShowTable] = useState(false);
+  const itemList = useSelector((state) => state.panier.list);
+
+  function add(accumulator, a) {
+    return accumulator + a;
+  }
 
   return (
     <div className="panierContainer">
-      <img
-        className="panierImg"
-        // style={hover ? styles.panier.panierImgHovered : styles.panier.panierImg}
-        onMouseEnter={() => {
-          setHover(true);
-        }}
-        onMouseLeave={() => setHover(false)}
-        onClick={() => {
-          setShowTable((prevState) => !prevState);
-        }}
-        src={panierImg}
-      />
-      {showTable && <PanierTable></PanierTable>}
-      {/* {showTable && <PanierTable styles={styles}></PanierTable>} */}
+      <div>
+        <img
+          className="panierImg"
+          onClick={() => {
+            setShowTable((prevState) => !prevState);
+          }}
+          src={panierImg}
+        />
 
-      {/* {itemList.length > 0 && ( */}
-      {/* {itemList.length > 0 && showTable && (
-        <PanierTable>
-          {itemList.map((item, key) => (
-            <PanierItem
-              key={key}
-              description={item.description}
-              price={item.price}
-              quantity={item.quantity}
-            />
-          ))}
-        </PanierTable>
-      )} */}
+        <span className="position-absolute top--10 start-90 translate-middle badge rounded-pill bg-info">
+          {itemList.map((element) => element.quantity).reduce(add, 0)}
+        </span>
+      </div>
+
+      {itemList.length > 0 && showTable && <PanierTable></PanierTable>}
     </div>
   );
 };
