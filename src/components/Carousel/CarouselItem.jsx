@@ -1,6 +1,5 @@
 import React from "react";
 import "../../assets/styles/components/CarouselItem.scss";
-// import "../../assets/styles/Media.scss";
 import moreIcon from "../../assets/statics/more_icon2.png";
 import addIcon from "../../assets/statics/plus_icon2.png";
 import { useDispatch, useSelector } from "react-redux";

@@ -8,61 +8,46 @@ import {
   incrementQty,
 } from "./panier.slice.js";
 import "../../assets/styles/components/DeleteButton.scss";
+import "../../assets/styles/components/Panier.scss";
 
 const PanierItem = (props) => {
-  const { styles } = props;
-  //Testing bototes add and delete
-  // const [count, setCount] = useState(props.quantity);
   const dispatch = useDispatch();
 
   return (
-    <div style={styles.table.divTableRow}>
-      <div style={styles.table.divTableCell}>
-        <img style={styles.table.imgItem} src={props.link} />
+    <div className="bodyContainer">
+      <div>
+        <img className="imgItem" src={props.link} />
       </div>
-      <div style={styles.table.divTableCell}>{props.description}</div>
-      <div style={styles.table.divTableCell}>${props.price}</div>
-      <div style={styles.table.divTableCell}>{props.quantity}</div>
-      <div style={styles.table.divTableCell}>
-        <div style={styles.button.container}>
-          {/* <button type="button" className="button-delete"> */}
-          <button
-            type="button"
-            style={styles.button.button}
-            onClick={() => {
-              dispatch(incrementQty(props.id));
-            }}
-          >
-            <div style={styles.button.divContainer}>
-              <span
-                style={{ ...styles.button.span, transform: "rotate(180deg)" }}
-              ></span>
-              <span
-                style={{
-                  ...styles.button.span,
-                  transform: "rotate(90deg)",
-                }}
-              ></span>
-            </div>
-          </button>
-          <button
-            type="button"
-            style={styles.button.button}
-            onClick={() => {
-              if (props.quantity > 1) {
-                dispatch(decrementQty(props.id));
-              } else {
-                dispatch(deleteCourse(props.id));
-              }
-            }}
-          >
-            <div style={styles.button.divContainer}>
-              <span
-                style={{ ...styles.button.span, transform: "rotate(0deg)" }}
-              ></span>
-            </div>
-          </button>
-        </div>
+      <p>{props.description}</p>
+      <p>${props.price}</p>
+      <p>{props.quantity}</p>
+      <div className="buttonContainer">
+        <button
+          type="button"
+          className="buttonStyle"
+          onClick={() => {
+            dispatch(incrementQty(props.id));
+          }}
+        >
+          <div className="divContainer">
+            <span>+</span>
+          </div>
+        </button>
+        <button
+          type="button"
+          className="buttonStyle"
+          onClick={() => {
+            if (props.quantity > 1) {
+              dispatch(decrementQty(props.id));
+            } else {
+              dispatch(deleteCourse(props.id));
+            }
+          }}
+        >
+          <div className="divContainer">
+            <span>-</span>
+          </div>
+        </button>
       </div>
     </div>
   );

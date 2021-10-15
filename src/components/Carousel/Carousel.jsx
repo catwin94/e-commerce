@@ -1,7 +1,6 @@
-import React, { Children, cloneElement, useState } from "react";
+import React, { useState } from "react";
 import "../../assets/styles/components/Carousel.scss";
 import "../../assets/styles/components/ArrowButton.scss";
-// import "../../assets/styles/Media.scss";
 
 const Carousel = (props) => {
   const nbOfVisibleSlides = 4;
