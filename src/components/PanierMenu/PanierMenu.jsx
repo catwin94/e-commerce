@@ -16,7 +16,8 @@ const PanierMenu = () => {
     <div className="panierContainer">
       <div>
         <img
-          className="panierImg"
+          // className="panierImg"
+          className="logoImg"
           onClick={() => {
             setShowTable((prevState) => !prevState);
           }}

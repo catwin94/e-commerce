@@ -1,7 +1,7 @@
-@import '../Variables.scss';
-@import '../App.scss';
+@import "../Variables.scss";
+@import "../App.scss";
 
-.login__container--form {
+.form-container {
   display: flex;
   flex-direction: column;
 
@@ -10,25 +10,22 @@
   }
 }
 
-
 .login__container--remember-me {
-  color: $mainFontColor;
+  color: $darkGray;
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
 
   & a {
-    color: $mainFontColor;
+    color: $darkGray;
     font-size: fontSize(medium);
     text-decoration: none;
-  
+
     &:hover {
       text-decoration: underline;
     }
   }
-
 }
-
 
 .login__container--social-media > div {
   /* > significa a todos los div hijos de login__container--social-media*/
@@ -45,14 +42,12 @@
   }
 }
 
-
-
 .login__container--register {
   font-size: fontSize(medium);
   text-align: center;
 
   & a {
-    color: $mainFontColor;
+    color: $darkGray;
     font-weight: bold;
     font-size: fontSize(medium);
     text-decoration: none;
@@ -61,4 +56,80 @@
       text-decoration: underline;
     }
   }
+}
+
+.register__container--form {
+  display: flex;
+  flex-direction: column;
+
+  & input {
+    font-family: "Muli", sans-serif;
+    font-size: fontSize(normal);
+    color: $darkGray;
+    background-color: transparent;
+    height: 5rem;
+    margin-bottom: 2rem;
+    padding: 0rem 2rem;
+    border-top: none;
+    border-right: none;
+    border-bottom: solid $blue 0.2rem;
+    border-left: none;
+    outline: none;
+  }
+
+  & input:focus::placeholder {
+    color: transparent;
+  }
+}
+
+.register__container--login a {
+  color: $darkGray;
+  font-size: fontSize(medium);
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    color: $gray;
+    text-decoration: underline;
+  }
+}
+
+.input {
+  background-color: transparent;
+  border-left: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 2px solid $blue;
+  // font-family: "Muli", sans-serif;
+  font-size: 16px;
+  color: $darkGray;
+  margin-bottom: 20px;
+  padding: 0px 20px;
+  outline: none;
+  height: 50px;
+}
+
+.input:focus::placeholder {
+  color: transparent;
+}
+
+::placeholder {
+  color: $gray;
+  // font-style: italic;
+}
+
+.form-button {
+  border: none;
+  padding: 1rem;
+  border-radius: 3rem;
+  background-color: $blue;
+  color: $white;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
 }

@@ -1,16 +1,15 @@
-@import '../Variables.scss';
-@import '../App.scss';
+@import "../Variables.scss";
+@import "../App.scss";
 
-.error{
+.error {
   background: none;
 }
-.error__container{
+.error__container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  // font-family: 'Muli', sans-serif;
-  color: $mainFontColor;
+  color: $darkGray;
   font-weight: bold;
 
   & p:nth-child(2) {
@@ -18,11 +17,11 @@
   }
 
   & a {
-    color: $mainFontColor;
+    color: $darkGray;
     font-size: fontSize(medium);
     text-decoration: none;
     padding-top: 1rem;
-  
+
     &:hover {
       text-decoration: underline;
     }
@@ -30,31 +29,70 @@
 }
 
 @keyframes hinge {
-  0% {transform: rotate(0);transform-origin: top left;animation-timing-function: ease-in-out;}
-  20%, 60% {transform: rotate(80deg);transform-origin: top left;animation-timing-function: ease-in-out;}
-  40% {transform: rotate(60deg);transform-origin: top left;animation-timing-function: ease-in-out;}
-  80% {transform: rotate(60deg) translateY(0);transform-origin: top left;animation-timing-function: ease-in-out;}
-  100% {transform: translateY(700px);}
+  0% {
+    transform: rotate(0);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  20%,
+  60% {
+    transform: rotate(80deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  40% {
+    transform: rotate(60deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  80% {
+    transform: rotate(60deg) translateY(0);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  100% {
+    transform: translateY(700px);
+  }
 }
 
 @keyframes pulse {
-  0% {transform: scale(1);}
-  50% {transform: scale(1.3);}
-  100% {transform: scale(1);}
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes flip {
-  0% {transform: perspective(400px) translateZ(0) rotateY(0) scale(1);animation-timing-function: ease-out;}
-  40% {transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);animation-timing-function: ease-out;}
-  50% {transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);animation-timing-function: ease-in;}
-  80% {transform: perspective(400px) translateZ(0) rotateY(360deg) scale(.95);animation-timing-function: ease-in;}
-  100% {transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);animation-timing-function: ease-in;}
+  0% {
+    transform: perspective(400px) translateZ(0) rotateY(0) scale(1);
+    animation-timing-function: ease-out;
+  }
+  40% {
+    transform: perspective(400px) translateZ(150px) rotateY(170deg) scale(1);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: perspective(400px) translateZ(150px) rotateY(190deg) scale(1);
+    animation-timing-function: ease-in;
+  }
+  80% {
+    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(0.95);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: perspective(400px) translateZ(0) rotateY(360deg) scale(1);
+    animation-timing-function: ease-in;
+  }
 }
 
-
-.error__container--number{
+.error__container--number {
   font-size: fontSize(xxlarge);
-  color: $redFontColor;
+  color: $warningRed;
   font-weight: bold;
   letter-spacing: 0.2rem;
 
@@ -67,7 +105,7 @@
   animation-name: flip;
 
   // & > span{
-  
+
   //   display: inline-block;
   //   animation-duration: 2.5s;
   //   animation-fill-mode: both;

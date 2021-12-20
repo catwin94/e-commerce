@@ -9,20 +9,20 @@
   padding: 30px;
   border-radius: 50%;
   margin: 10px;
-  background: $blueBackground;
+  background: $blue;
   display: flex;
   align-items: center;
   transition: 200ms;
 }
 .arrowButton:active {
-  background-color: $blueBackground;
+  background-color: $blue;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   /* box-shadow: 1px 1px #666; */
   transform: translateY(1px);
 }
 .arrowButton:hover {
   scale: 1.2;
-  background: $ligthBackground;
+  background: $white;
   /* opacity: 0.7; */
 }
 .arrowButton span {
@@ -30,19 +30,19 @@
   /* right: 18px; */
   width: 15px;
   height: 15px;
-  border: solid 4px $secondaryFontColor;
+  border: solid 4px $whiteGray;
   transition: 0.8s;
   /* transform: translateY(-50%) rotate(-45deg); */
   transform: rotate(-45deg);
 }
 .arrowButton:hover span {
-  border: solid 4px $blueBackground;
+  border: solid 4px $blue;
 }
 
 /* Button arrowButton buttonNext course */
 .arrowButton .buttonNext {
   right: 21px;
-  border: solid 4px $secondaryFontColor;
+  border: solid 4px $whiteGray;
   border-top: none;
   border-left: none;
 }
@@ -55,7 +55,7 @@
 /* Button arrowButton buttonPrevious course */
 .arrowButton .buttonPrevious {
   right: 17px;
-  border: solid 4px $secondaryFontColor;
+  border: solid 4px $whiteGray;
   border-bottom: none;
   border-right: none;
 }

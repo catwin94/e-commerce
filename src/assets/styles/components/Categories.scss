@@ -16,10 +16,10 @@
     // border: solid green 2px;
     padding: 3rem 7rem 0 7rem;
     & h1 {
-      color: $mainFontColor;
+      color: $darkGray;
       // text-align: center;
       font-size: fontSize(xlarge);
-      border-bottom: $blueBackground solid 0.3rem;
+      border-bottom: $blue solid 0.3rem;
     }
   }
 }

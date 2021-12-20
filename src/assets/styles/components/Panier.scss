@@ -5,15 +5,19 @@
 .panierContainer {
   display: flex;
   flex-direction: column;
-  justify-content: "center";
-  align-items: "flex-end";
-  padding-top: "10px";
+  justify-content: center;
+  align-items: flex-end;
+  // padding-top: 10;
 
   .panierImg {
-    width: "70px";
-    height: "68px";
-    padding: "4px 10px 20px 15px";
-    transition: "200ms";
+    width: 50px;
+    height: 40px;
+    padding: 0px 5px 0px 5px;
+    transition: 200ms;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -24,9 +28,9 @@
   justify-content: center;
   align-items: center;
   box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.4);
-  background: $whiteColor;
+  background: $white;
   font-weight: bold;
-  color: $darkGrayColor;
+  color: $darkGray;
   border-radius: 10px;
   padding: 10px 10px;
   position: absolute;
@@ -38,9 +42,9 @@
     justify-content: stretch;
     justify-items: center;
     width: 100%;
-    background: $blueColor;
+    background: $blue;
     padding: 1.5px 0;
-    border-bottom: 2px solid $whiteColor;
+    border-bottom: 2px solid $white;
     grid-template-columns: 2fr 3fr 1.5fr 1.5fr;
     grid-template-rows: auto;
   }
@@ -57,8 +61,8 @@
       width: 100%;
       grid-template-columns: 2.3fr 3fr 1fr 1fr 0.8fr;
       grid-template-rows: auto;
-      background: $ligthGrayColor;
-      border-bottom: 2px solid $whiteColor;
+      background: $ligthGray;
+      border-bottom: 2px solid $white;
       padding-right: 10px;
       // & p{}
 
@@ -72,7 +76,7 @@
           width: 25px;
           height: 25px;
           border-radius: 20px;
-          background-color: $blueColor;
+          background-color: $blue;
 
           transition: all 200ms ease 0s;
           & .divContainer {
@@ -83,7 +87,7 @@
             & span {
               width: 11px;
               position: absolute;
-              color: white;
+              color: $white;
               font-weight: 800;
             }
           }

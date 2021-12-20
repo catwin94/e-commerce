@@ -4,23 +4,16 @@
 
 /* --------Footer-------- */
 .footer {
-  background: $headerBackground;
-  color: $secondaryFontColor;
+  background: $gray;
+  color: $white;
   text-align: center;
-  // position: relative;
-  // bottom: 0;
-  // width: 100%;
-  // height: 8rem;
-  // margin: 0;
-
   display: flex;
   align-items: center;
-  // justify-content: flex-start;
   height: 10rem;
   width: 100%;
 
   & a {
-    color: $secondaryFontColor;
+    color: $white;
     font-family: $themeFont;
     text-decoration: none;
     cursor: pointer;
