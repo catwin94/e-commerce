@@ -56,3 +56,33 @@
   width: 100%;
   z-index: 1;
 }
+
+//Mobile
+@media only screen and (max-width: 768px) {
+  /* --------Header-------- */
+  .header {
+    padding: 0.5rem;
+    height: 6rem;
+    & .logo {
+      width: 64vw;
+      & a {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+      & img {
+        width: 3.9rem;
+      }
+      & .logoName {
+        width: 12rem;
+        height: 3.3rem;
+        margin: 0;
+      }
+    }
+  }
+  .logoImg {
+    width: 3.3rem;
+    margin-left: 0.5rem;
+  }
+}

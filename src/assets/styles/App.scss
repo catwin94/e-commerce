@@ -7,18 +7,10 @@
 }
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
   font-family: $themeFont;
   background: $white;
-  display: flex;
-  flex-flow: column;
-}
-
-.app {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  min-height: 100vh;
 }

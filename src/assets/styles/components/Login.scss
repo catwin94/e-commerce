@@ -1,123 +1,29 @@
 @import "../Variables.scss";
 @import "../App.scss";
 
+//Desktop - Global
+
 .form-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 100%;
 
   label {
     font-size: fontSize(medium);
-  }
-}
+    font-style: italic;
 
-.login__container--remember-me {
-  color: $darkGray;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-
-  & a {
-    color: $darkGray;
-    font-size: fontSize(medium);
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
+    & input {
+      margin-right: 1rem;
     }
   }
 }
 
-.login__container--social-media > div {
-  /* > significa a todos los div hijos de login__container--social-media*/
-  display: flex;
-  align-items: center;
-  font-size: fontSize(medium);
-  margin-bottom: 1rem;
-  justify-content: center;
-
-  & > img {
-    /* > significa a tomas la img que esten dentro de div que esten dentro de login__container--social-media*/
-    width: 2.5rem;
-    margin-right: 3rem;
-  }
-}
-
-.login__container--register {
-  font-size: fontSize(medium);
-  text-align: center;
-
-  & a {
-    color: $darkGray;
-    font-weight: bold;
-    font-size: fontSize(medium);
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
-.register__container--form {
-  display: flex;
-  flex-direction: column;
-
-  & input {
-    font-family: "Muli", sans-serif;
-    font-size: fontSize(normal);
-    color: $darkGray;
-    background-color: transparent;
-    height: 5rem;
-    margin-bottom: 2rem;
-    padding: 0rem 2rem;
-    border-top: none;
-    border-right: none;
-    border-bottom: solid $blue 0.2rem;
-    border-left: none;
-    outline: none;
-  }
-
-  & input:focus::placeholder {
-    color: transparent;
-  }
-}
-
-.register__container--login a {
+.sub-container h2 {
   color: $darkGray;
+  font-style: italic;
   font-size: fontSize(medium);
-  font-weight: bold;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-
-  &:hover {
-    color: $gray;
-    text-decoration: underline;
-  }
-}
-
-.input {
-  background-color: transparent;
-  border-left: 0px;
-  border-top: 0px;
-  border-right: 0px;
-  border-bottom: 2px solid $blue;
-  // font-family: "Muli", sans-serif;
-  font-size: 16px;
-  color: $darkGray;
-  margin-bottom: 20px;
-  padding: 0px 20px;
-  outline: none;
-  height: 50px;
-}
-
-.input:focus::placeholder {
-  color: transparent;
-}
-
-::placeholder {
-  color: $gray;
-  // font-style: italic;
+  cursor: default;
 }
 
 .form-button {
@@ -126,10 +32,231 @@
   border-radius: 3rem;
   background-color: $blue;
   color: $white;
-
+  margin: 3.5rem 0 2rem 0;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
+  min-width: 60rem;
 }
+
+.socialMedia-container {
+  display: flex;
+  flex-direction: row;
+  // min-width: 44rem;
+  justify-content: space-between;
+  cursor: pointer;
+  // border: solid 4px yellow;
+
+  & > div {
+    /* > significa a todos los div hijos de login__container--social-media*/
+    display: flex;
+    align-items: center;
+    font-size: fontSize(medium);
+    margin-bottom: 1rem;
+    justify-content: center;
+
+    & > img {
+      /* > significa a tomas la img que esten dentro de div que esten dentro de login__container--social-media*/
+      width: 2.5rem;
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+.login-register-switch {
+  & a {
+    color: $blue;
+    font-weight: bold;
+    font-size: fontSize(normal);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+@media only screen and (min-width: 992px) {
+  .input {
+    background-color: transparent;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid $blue;
+    font-size: 16px;
+    color: $darkGray;
+    margin-bottom: 3rem;
+    padding: 0px 1.5rem;
+    outline: none;
+    height: 4rem;
+    width: 60rem;
+  }
+
+  .input:focus::placeholder {
+    color: transparent;
+  }
+
+  ::placeholder {
+    color: $gray;
+    font-style: italic;
+  }
+
+  .rememberMe-container {
+    color: $darkGray;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    min-width: 45rem;
+
+    & a {
+      color: $darkGray;
+      font-size: fontSize(medium);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+//Tablet
+
+//Mobile
+@media only screen and (max-width: 768px) {
+  .sub-container h2 {
+    margin-bottom: 4rem;
+  }
+  .input {
+    background-color: transparent;
+    border-left: 0px;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 2px solid $blue;
+    font-size: 16px;
+    color: $darkGray;
+    margin-bottom: 3rem;
+    padding: 0px 1.5rem;
+    outline: none;
+    height: 3rem;
+    width: 30rem;
+  }
+
+  .input:focus::placeholder {
+    color: transparent;
+  }
+
+  ::placeholder {
+    color: $gray;
+    font-style: italic;
+  }
+
+  .form-button {
+    border: none;
+    padding: 1rem;
+    border-radius: 3rem;
+    background-color: $blue;
+    color: $white;
+    margin: 3.5rem 0 2rem 0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    min-width: 30rem;
+  }
+
+  .rememberMe-container {
+    color: $darkGray;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    min-width: 30rem;
+    font-style: italic;
+
+    & a {
+      color: $darkGray;
+      font-size: fontSize(medium);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .socialMedia-container {
+    flex-direction: column;
+    margin: 6rem 0;
+  }
+}
+
+// .login__container--register {
+//   font-size: fontSize(medium);
+//   text-align: center;
+
+//   & a {
+//     color: $darkGray;
+//     font-weight: bold;
+//     font-size: fontSize(medium);
+//     text-decoration: none;
+
+//     &:hover {
+//       text-decoration: underline;
+//     }
+//   }
+// }
+
+// .register__container--form {
+//   display: flex;
+//   flex-direction: column;
+
+//   & input {
+//     font-family: "Muli", sans-serif;
+//     font-size: fontSize(normal);
+//     color: $darkGray;
+//     background-color: transparent;
+//     height: 5rem;
+//     width: 80%;
+//     margin-bottom: 2rem;
+//     padding: 0rem 2rem;
+//     border-top: none;
+//     border-right: none;
+//     border-bottom: solid $blue 0.2rem;
+//     border-left: none;
+//     outline: none;
+//   }
+
+//   & input:focus::placeholder {
+//     color: transparent;
+//   }
+// }
+
+// .register__container--login a {
+//   color: $darkGray;
+//   font-size: fontSize(medium);
+//   font-weight: bold;
+//   text-decoration: none;
+//   display: flex;
+//   justify-content: center;
+
+//   &:hover {
+//     color: $gray;
+//     text-decoration: underline;
+//   }
+// }
+
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) {
+// }
+// /* Small devices (portrait tablets and large phones, 600px and up) */
+// @media only screen and (min-width: 600px) {
+// }
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {
+// }
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {
+// }

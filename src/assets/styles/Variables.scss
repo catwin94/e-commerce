@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
 
 //Main Colors
-$darkGray: #3b3936;
+$darkGray: #4c4a48;
 $gray: #84828f;
 $ligthGray: rgb(197, 197, 197);
 $whiteGray: #fbfbfb;
@@ -15,7 +15,7 @@ $themeFont: "Roboto", sans-serif;
 
 // Fonts size
 $fontSize: (
-  "regular": 0.5rem,
+  "regular": 1.1rem,
   "medium": 1.3rem,
   "normal": 1.5rem,
   "large": 2rem,
@@ -25,17 +25,3 @@ $fontSize: (
 @function fontSize($name) {
   @return map-get($fontSize, $name);
 }
-
-// Background Colors
-
-// Fonts colors
-// $mainFontColor: #3b3936;
-// $secondaryFontColor: #f9f9f9;
-// $ligthFontColor: #84828f;
-// $redFontColor: #ba1f33;
-
-// $whiteBackground: white;
-// $bodyBackground: #f0f0f0;
-// $blueBackground: #40d3dc;
-// $headerBackground: #84828f;
-// $ligthBackground: rgb(197, 197, 197);

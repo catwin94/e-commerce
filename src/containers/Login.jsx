@@ -24,15 +24,17 @@ const Login = () => {
             placeholder="Password"
           />
           <button className="form-button">Login</button>
-          <div className="login__container--remember-me">
+          <div className="rememberMe-container">
             <label>
               <input type="checkbox" name="" id="cbox1" value="checkbox" />
               Remember me
             </label>
-            <a href="/">Forgot password?</a>
+            <a href="javascript:window.location.reload(true)">
+              Forgot password?
+            </a>
           </div>
         </form>
-        <section className="login__container--social-media">
+        <section className="socialMedia-container">
           <div>
             <img src={googleIcon} alt="Google" />
             Login with Google
@@ -42,7 +44,7 @@ const Login = () => {
             Login with Twitter
           </div>
         </section>
-        <p className="login__container--register">
+        <p className="login-register-switch">
           <Link to="/register"> Create account </Link>
         </p>
       </div>

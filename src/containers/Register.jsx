@@ -7,16 +7,16 @@ import "../assets/styles/components/MainContainer.scss";
 
 const Register = () => {
   return (
-    <section className="container">
-      <div className="sub__container">
+    <section className="section-container">
+      <div className="sub-container">
         <h2>Regístrate</h2>
-        <form className="register__container--form" action="">
+        <form className="form-container" action="">
           <input className="input" type="text" placeholder="Nombre" />
           <input className="input" type="email" placeholder="Correo" />
           <input className="input" type="password" placeholder="Contraseña" />
-          <button className="button">Registrarme</button>
+          <button className="form-button">Registrarme</button>
         </form>
-        <p className="register__container--login">
+        <p className="login-register-switch">
           <Link to="/login"> Iniciar Sesión </Link>
         </p>
       </div>
