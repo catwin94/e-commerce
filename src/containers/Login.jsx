@@ -2,8 +2,8 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import googleIcon from "../assets/statics/google-icon2.png";
 import twitterIcon from "../assets/statics/twitter-icon2.png";
-import "../assets/styles/components/Login.scss";
-import "../assets/styles/components/MainContainer.scss";
+import "../assets/styles/components/LoginRegister.scss";
+import "../assets/styles/components/Layout.scss";
 
 const Login = () => {
   return (

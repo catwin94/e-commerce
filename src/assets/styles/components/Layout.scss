@@ -1,0 +1,177 @@
+@import "../Variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  // height: 100%;
+}
+
+body {
+  font-family: $themeFont;
+  background: $white;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+}
+
+/* --------Header-------- */
+.header {
+  height: 7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  border-bottom: 0.5rem solid $white;
+  background: $gray;
+  color: $white;
+  font-size: fontSize(medium);
+
+  & .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & img {
+      width: 4rem;
+    }
+
+    & h1 {
+      text-decoration: underline 0.2rem;
+      font-size: fontSize(xlarge);
+      margin-left: 1rem;
+    }
+
+    & .logoName {
+      width: 14rem;
+      margin-left: 2rem;
+    }
+  }
+
+  /* Menu */
+  & .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.logoImg {
+  width: 4rem;
+  margin-left: 1rem;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+//Mobile
+@media only screen and (max-width: 768px) {
+  /* --------Header-------- */
+  .header {
+    padding: 0.5rem;
+    height: 6rem;
+    & .logo {
+      width: 64vw;
+      & a {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+      & img {
+        width: 3.9rem;
+      }
+      & .logoName {
+        width: 12rem;
+        height: 3.3rem;
+        margin: 0;
+      }
+    }
+  }
+  .logoImg {
+    width: 3.3rem;
+    margin-left: 0.5rem;
+  }
+}
+
+// Body
+.section-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: calc(
+    100vh - 16rem
+  ); /*del 100% de view height (100vw) va a ocupar toda la pantalla menos 200 px que se reservan para el header y el footer*/ /*Quiero que se vean 200px exceptuando el header y el footer*/
+}
+.sub-container {
+  color: $darkGray;
+  min-height: 55rem;
+  width: 60vw;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  & h2 {
+    text-align: center;
+    font-size: fontSize(large);
+  }
+}
+
+/* --------Footer-------- */
+.footer {
+  background: $gray;
+  color: $white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 10rem;
+  width: 100%;
+  // position: absolute;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+
+  & a {
+    color: $white;
+    font-family: $themeFont;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: fontSize(medium);
+    // padding-left: 3rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+//Mobile
+@media only screen and (max-width: 768px) {
+  // Body
+  .section-container {
+    min-height: calc(100vh - 14rem);
+  }
+
+  .footer {
+    height: 8rem;
+    justify-content: space-around;
+
+    & a {
+      font-size: fontSize(regular);
+    }
+  }
+}

@@ -4,7 +4,7 @@ import PanierMenu from "./PanierMenu/PanierMenu";
 import logo from "../assets/statics/icon_logo.png";
 import logoName from "../assets/statics/logo2.png";
 import logoAccount from "../assets/statics/user_icon3.png";
-import "../assets/styles/components/Header.scss";
+import "../assets/styles/components/Layout.scss";
 
 const Header = () => {
   return (

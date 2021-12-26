@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../assets/styles/components/Login.scss";
-import "../assets/styles/components/MainContainer.scss";
+import "../assets/styles/components/LoginRegister.scss";
+import "../assets/styles/components/Layout.scss";
 // import '../assets/styles/components/Button.scss';
 // import "../assets/styles/components/Input.scss";
 
