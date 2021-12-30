@@ -4,9 +4,9 @@ import "../assets/styles/components/Layout.scss";
 const Footer = () => {
   return (
     <footer className="footer">
-      <a href="/">Términos de uso</a>
-      <a href="/">Declaración de privacidad</a>
-      <a href="/">Centro de ayuda</a>
+      <a href="/">Privacy policy</a>
+      <a href="/">Terms and conditions</a>
+      <a href="/">Help</a>
     </footer>
   );
 };

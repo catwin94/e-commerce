@@ -1,5 +1,15 @@
 @import "../Variables.scss";
 
+/* Description
+  This file contains: 
+    - Global styles
+    - Layout styles (for desktop, tablet and mobile) as:
+      .Header styles
+      .Body styles
+      .Footer styles
+*/
+
+// Global styles
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,6 +30,8 @@ body {
   flex-direction: column;
 }
 
+// Layout styles
+// Desktop
 /* --------Header-------- */
 .header {
   height: 7rem;
@@ -44,16 +56,13 @@ body {
     & h1 {
       text-decoration: underline 0.2rem;
       font-size: fontSize(xlarge);
-      margin-left: 1rem;
     }
 
     & .logoName {
       width: 14rem;
-      margin-left: 2rem;
     }
   }
 
-  /* Menu */
   & .menu {
     display: flex;
     flex-direction: row;
@@ -63,6 +72,9 @@ body {
 }
 
 .logoImg {
+  width: 4rem;
+}
+.loginIcon {
   width: 4rem;
   margin-left: 1rem;
 }
@@ -75,36 +87,6 @@ body {
   z-index: 1;
 }
 
-//Mobile
-@media only screen and (max-width: 768px) {
-  /* --------Header-------- */
-  .header {
-    padding: 0.5rem;
-    height: 6rem;
-    & .logo {
-      width: 64vw;
-      & a {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-      }
-      & img {
-        width: 3.9rem;
-      }
-      & .logoName {
-        width: 12rem;
-        height: 3.3rem;
-        margin: 0;
-      }
-    }
-  }
-  .logoImg {
-    width: 3.3rem;
-    margin-left: 0.5rem;
-  }
-}
-
 // Body
 .section-container {
   display: flex;
@@ -112,7 +94,7 @@ body {
   justify-content: center;
   flex-direction: column;
   min-height: calc(
-    100vh - 16rem
+    100vh - 15rem
   ); /*del 100% de view height (100vw) va a ocupar toda la pantalla menos 200 px que se reservan para el header y el footer*/ /*Quiero que se vean 200px exceptuando el header y el footer*/
 }
 .sub-container {
@@ -138,20 +120,15 @@ body {
   text-align: center;
   display: flex;
   align-items: center;
-  height: 10rem;
+  height: 8rem;
   width: 100%;
-  // position: absolute;
-  // right: 0;
-  // bottom: 0;
-  // left: 0;
 
   & a {
     color: $white;
-    font-family: $themeFont;
     text-decoration: none;
     cursor: pointer;
     font-size: fontSize(medium);
-    // padding-left: 3rem;
+    padding-left: 3rem;
 
     &:hover {
       text-decoration: underline;
@@ -159,19 +136,52 @@ body {
   }
 }
 
+//Tablet
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+}
+
 //Mobile
 @media only screen and (max-width: 768px) {
+  /* --------Header-------- */
+  .header {
+    padding: 2rem;
+    height: 6rem;
+    & .logo {
+      & a {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      & .logoName {
+        width: 12rem;
+        height: 3.3rem;
+        margin: 0;
+      }
+    }
+  }
+  .logoImg {
+    width: 3.3rem;
+    margin-left: 0.5rem;
+  }
+
   // Body
   .section-container {
     min-height: calc(100vh - 14rem);
   }
 
+  //Footer
   .footer {
     height: 8rem;
     justify-content: space-around;
 
     & a {
+      padding: 0;
       font-size: fontSize(regular);
     }
   }
+}
+
+@media only screen and (max-width: 768px) and(max-height:740px) {
 }

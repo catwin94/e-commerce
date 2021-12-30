@@ -1,7 +1,8 @@
 @import "../Variables.scss";
 
-//Desktop - Global
-
+//Desktop
+// @media only screen and (min-width: 0px) {
+// @media only screen and (min-width: 992px) {
 .form-container {
   display: flex;
   flex-direction: column;
@@ -21,8 +22,52 @@
 .sub-container h2 {
   color: $darkGray;
   font-style: italic;
-  font-size: fontSize(medium);
+  font-weight: bold;
+  font-size: fontSize(normalm);
   cursor: default;
+}
+
+.input {
+  background-color: transparent;
+  border-left: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 2px solid $blue;
+  font-size: fontSize(normal);
+  color: $darkGray;
+  margin-bottom: 3rem;
+  padding: 0px 1.5rem;
+  outline: none;
+  height: 4rem;
+  width: 60rem;
+}
+
+.input:focus::placeholder {
+  color: transparent;
+}
+
+::placeholder {
+  color: $gray;
+  font-style: italic;
+}
+
+.rememberMe-container {
+  color: $darkGray;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 0 1rem;
+  min-width: 45rem;
+
+  & a {
+    color: $darkGray;
+    font-size: fontSize(medium);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .form-button {
@@ -43,7 +88,7 @@
 .socialMedia-container {
   display: flex;
   flex-direction: row;
-  // min-width: 44rem;
+  min-width: 45rem;
   justify-content: space-between;
   cursor: pointer;
   // border: solid 4px yellow;
@@ -53,13 +98,15 @@
     display: flex;
     align-items: center;
     font-size: fontSize(medium);
+
     margin-bottom: 1rem;
+    // margin-left: 7rem;
     justify-content: center;
 
     & > img {
       /* > significa a tomas la img que esten dentro de div que esten dentro de login__container--social-media*/
       width: 2.5rem;
-      margin-right: 1.5rem;
+      margin-right: 1.1rem;
     }
   }
 }
@@ -76,58 +123,43 @@
     }
   }
 }
-@media only screen and (min-width: 992px) {
-  .input {
-    background-color: transparent;
-    border-left: 0px;
-    border-top: 0px;
-    border-right: 0px;
-    border-bottom: 2px solid $blue;
-    font-size: fontSize(normal);
-    color: $darkGray;
-    margin-bottom: 3rem;
-    padding: 0px 1.5rem;
-    outline: none;
-    height: 4rem;
-    width: 60rem;
-  }
+// }
 
-  .input:focus::placeholder {
-    color: transparent;
+//Tablet
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .form-container {
+    label {
+      font-size: fontSize(normal);
+    }
   }
-
-  ::placeholder {
-    color: $gray;
-    font-style: italic;
+  .sub-container h2 {
+    font-size: fontSize(large);
   }
-
   .rememberMe-container {
-    color: $darkGray;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-    padding: 0 1rem;
-    min-width: 45rem;
-
     & a {
-      color: $darkGray;
-      font-size: fontSize(medium);
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
+      font-size: fontSize(normal);
+    }
+  }
+  .socialMedia-container {
+    & > div {
+      font-size: fontSize(normal);
+    }
+  }
+  .login-register-switch {
+    margin-top: 10rem;
+    & a {
+      font-size: fontSize(normalm);
     }
   }
 }
-
-//Tablet
 
 //Mobile
 @media only screen and (max-width: 768px) {
   .sub-container h2 {
     margin-bottom: 4rem;
+    font-size: fontSize(normalm);
   }
+
   .input {
     background-color: transparent;
     border-left: 0px;
@@ -202,71 +234,3 @@
     font-weight: normal;
   }
 }
-
-// .login__container--register {
-//   font-size: fontSize(medium);
-//   text-align: center;
-
-//   & a {
-//     color: $darkGray;
-//     font-weight: bold;
-//     font-size: fontSize(medium);
-//     text-decoration: none;
-
-//     &:hover {
-//       text-decoration: underline;
-//     }
-//   }
-// }
-
-// .register__container--form {
-//   display: flex;
-//   flex-direction: column;
-
-//   & input {
-//     font-family: "Muli", sans-serif;
-//     font-size: fontSize(normal);
-//     color: $darkGray;
-//     background-color: transparent;
-//     height: 5rem;
-//     width: 80%;
-//     margin-bottom: 2rem;
-//     padding: 0rem 2rem;
-//     border-top: none;
-//     border-right: none;
-//     border-bottom: solid $blue 0.2rem;
-//     border-left: none;
-//     outline: none;
-//   }
-
-//   & input:focus::placeholder {
-//     color: transparent;
-//   }
-// }
-
-// .register__container--login a {
-//   color: $darkGray;
-//   font-size: fontSize(medium);
-//   font-weight: bold;
-//   text-decoration: none;
-//   display: flex;
-//   justify-content: center;
-
-//   &:hover {
-//     color: $gray;
-//     text-decoration: underline;
-//   }
-// }
-
-// /* Extra small devices (phones, 600px and down) */
-// @media only screen and (max-width: 600px) {
-// }
-// /* Small devices (portrait tablets and large phones, 600px and up) */
-// @media only screen and (min-width: 600px) {
-// }
-// /* Medium devices (landscape tablets, 768px and up) */
-// @media only screen and (min-width: 768px) {
-// }
-// /* Large devices (laptops/desktops, 992px and up) */
-// @media only screen and (min-width: 992px) {
-// }

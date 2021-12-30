@@ -12,13 +12,17 @@ const Header = () => {
       <div className="logo">
         <Link to="/">
           <img src={logo} alt="Home Icon" />
+        </Link>
+      </div>
+      <div className="logo">
+        <Link to="/">
           <img className="logoName" src={logoName} alt="Home Icon name" />
         </Link>
       </div>
       <div className="menu">
         <PanierMenu />
         <Link to="/Login">
-          <img className="logoImg" src={logoAccount} alt="Account Icon" />
+          <img className="loginIcon" src={logoAccount} alt="Account Icon" />
         </Link>
         {/* <UserMenu /> */}
       </div>
