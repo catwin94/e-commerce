@@ -1,5 +1,5 @@
 import React from "react";
-import "../../assets/styles/components/CarouselItem.scss";
+import "../../assets/styles/components/Carousel.scss";
 import moreIcon from "../../assets/statics/more_icon2.png";
 import addIcon from "../../assets/statics/plus_icon2.png";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,7 +14,7 @@ const CarouselItem = (props) => {
     <div className="slide-item" style={{ width: `${itemWidth}px` }}>
       <img src={props.pictureLink} alt="" />
       <div className="slide-item-details">
-        <div>
+        {/* <div>
           <img
             src={addIcon}
             alt="Add"
@@ -27,10 +27,23 @@ const CarouselItem = (props) => {
             }}
           />
           <img src={moreIcon} alt="more details" />
-        </div>
+        </div> */}
         <div>
           <p className="slide-item-details--title">{title}</p>
           <p className="slide-item-details--subtitle">{description}</p>
+        </div>
+        <div>
+          <img
+            src={addIcon}
+            alt="Add"
+            onClick={() => {
+              if (itemList.some((item) => item.id === props.item.id)) {
+                dispatch(incrementQty(props.item.id));
+              } else {
+                dispatch(addCourse(props.item));
+              }
+            }}
+          />
         </div>
       </div>
     </div>

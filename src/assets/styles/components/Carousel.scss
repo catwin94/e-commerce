@@ -33,3 +33,97 @@
   // background: pink;
   transition: 1.4s;
 }
+
+/* Items or slides------------------------------------------------------------------------------------------------ */
+.slide-item {
+  margin-left: 11px;
+  // width:330px;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+  transition: 450ms;
+  transform-origin: center left;
+  position: relative;
+
+  & img {
+    width: 89%;
+    height: 35rem;
+    border-radius: 10px;
+    background-size: contain;
+    object-fit: cover;
+  }
+}
+.slide-item:hover ~ .slide-item {
+  /*cuando un item este en hover todos los otros sin hover (~) haran lo que dice entre {} */
+  /*Es un selector de hermanos, por ejemplo con
+  div ~ p seleccionamos todos los p hermanos de un div*/
+  transform: translate3d(30px, 0, 0);
+  /*Cuando hacemos hover todos los elementos se desplazaran hacia la derecha*/
+}
+.slide-container:hover .slide-item {
+  opacity: 0.3;
+
+  &:hover {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+/* Items details------------------------------------------------------------------------------------------------- */
+.slide-item-details {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  border-radius: 10px;
+  font-size: 13px;
+  color: white;
+  opacity: 0;
+  transition: 50ms opacity;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 34px;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  // border: red solid 2px;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  & div {
+    // border: red solid 2px;
+    height: 5rem;
+
+    & img {
+      // border: green solid 2px;
+      width: 35px;
+      height: 35px;
+      // margin: 6px 10px;
+      margin: 6px 0 6px 1rem;
+
+      transition: 0.2s;
+
+      &:hover {
+        scale: 1.2;
+      }
+    }
+  }
+}
+.slide-item-details--title {
+  border-bottom: solid 2px $white;
+  width: 17rem;
+  margin-bottom: 0px;
+  padding-right: 2rem;
+  font-weight: bold;
+}
+.slide-item-details--subtitle {
+  margin-top: 1px;
+  font-style: italic;
+}
