@@ -1,4 +1,5 @@
 @import "../Variables.scss";
+@import url("https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css");
 
 $cardViewerWidth: 80vw;
 $cardWidth: 27rem;
@@ -67,16 +68,25 @@ $cardViewerHeight: $cardHeight + 2rem;
 
   & div {
     height: 5rem;
+    margin-left: 0.7rem;
+  }
 
-    & img {
-      width: 35px;
-      height: 35px;
-      margin: 6px 0 6px 1rem;
-      transition: 0.2s;
+  & i {
+    border: 1px solid $white;
+    border-radius: 50%;
+    height: 3.7rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    color: $white;
+    font-size: 3.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
 
-      &:hover {
-        scale: 1.2;
-      }
+    &:hover {
+      scale: 1.2;
     }
   }
 }
@@ -144,9 +154,9 @@ $cardViewerHeight: $cardHeight + 2rem;
 //Mobile
 @media only screen and (max-width: 768px) {
   $cardWidth: 16rem;
-  $cardHeight: 18rem;
+  $cardHeight: 20rem;
   $cardViewerWidth: 90vw;
-  $cardViewerHeight: $cardHeight * 2;
+  $cardViewerHeight: $cardHeight * 2.05;
 
   .cardViewer {
     width: $cardViewerWidth;
@@ -169,14 +179,15 @@ $cardViewerHeight: $cardHeight + 2rem;
   /* Card Item ----------------------------- */
 
   .cardItem {
-    border: rebeccapurple 1px solid;
+    // border: rebeccapurple 1px solid;
     width: $cardWidth;
     height: $cardHeight;
+    margin-bottom: 1rem;
     padding: 0;
 
     & .cardImg {
       width: 100%; /* or any custom size */
-      height: 80%;
+      height: 78%;
       border-radius: 1rem;
       object-fit: cover;
     }
@@ -189,40 +200,42 @@ $cardViewerHeight: $cardHeight + 2rem;
     font-size: fontSize(small);
     color: $darkGray;
     opacity: 1;
-    // transition: 50ms opacity;
     padding: 0;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    // display: flex;
-    // flex-direction: row;
-    // align-items: flex-end;
-    // justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: baseline;
 
     & div {
-      width: 100%;
+      width: 80%;
       height: 3.7rem;
+    }
 
-      & img {
-        width: 35px;
-        height: 35px;
-        margin: 6px 0 6px 1rem;
-        transition: 0.2s;
-
-        &:hover {
-          scale: 1.2;
-        }
-      }
+    & i {
+      border: 1px solid $darkGray;
+      border-radius: 50%;
+      height: 2.5rem;
+      width: 2.5rem;
+      margin: 0;
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+      color: $darkGray;
+      font-size: 2rem;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
   .cardDetails--title {
-    // border: 2px green solid;
     border-bottom: solid 2px $darkGray;
-    width: 75%;
+    width: 95%;
     margin-bottom: 0px;
-    margin-left: 1rem;
     padding-right: 2rem;
     font-weight: bold;
   }
@@ -232,7 +245,6 @@ $cardViewerHeight: $cardHeight + 2rem;
   .cardDetails--price {
     color: $darkGray;
     width: 80%;
-    margin-left: 1rem;
   }
 }
 

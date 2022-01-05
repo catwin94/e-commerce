@@ -21,3 +21,32 @@
     }
   }
 }
+
+//Tablet
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .carousel-container {
+    & .title {
+      padding: 3rem 0 0 0;
+      & h1 {
+        color: $darkGray;
+        text-align: center;
+        line-height: 3rem;
+      }
+    }
+  }
+}
+
+//Mobile
+@media only screen and (max-width: 768px) {
+  .carousel-container {
+    & .title {
+      padding: 3rem 0 0 0;
+      & h1 {
+        color: $darkGray;
+        text-align: center;
+        font-size: fontSize(large);
+        line-height: 3rem;
+      }
+    }
+  }
+}

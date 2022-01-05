@@ -34,20 +34,16 @@ const CarouselItem = (props) => {
           <p className="cardDetails--subtitle">{description}</p>
           <p className="cardDetails--price">${price}</p>
         </div>
-        <div>
-          <i className="bx bx-plus-circle"></i>
-          {/* <img
-            src={addIcon}
-            alt="Add"
-            onClick={() => {
-              if (itemList.some((item) => item.id === props.item.id)) {
-                dispatch(incrementQty(props.item.id));
-              } else {
-                dispatch(addCourse(props.item));
-              }
-            }}
-          /> */}
-        </div>
+        <i
+          className="bx bx-plus"
+          onClick={() => {
+            if (itemList.some((item) => item.id === props.item.id)) {
+              dispatch(incrementQty(props.item.id));
+            } else {
+              dispatch(addCourse(props.item));
+            }
+          }}
+        />
       </div>
     </div>
   );
