@@ -63,3 +63,10 @@
   border-right: none;
   transform: rotate(315deg);
 }
+
+//Mobile
+@media only screen and (max-width: 768px) {
+  .arrowButton {
+    display: none;
+  }
+}

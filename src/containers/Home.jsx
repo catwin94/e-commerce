@@ -6,7 +6,7 @@ import SiderBar from "../components/SiderBar";
 import { useSelector } from "react-redux";
 
 const Home = () => {
-  const itemWidth = 300;
+  const itemHeight = 350;
   const offer = "30% Off Your Purchase from $80! | Code:FDSE21";
 
   const carouselList = useSelector((state) => state.courses.list);
@@ -16,7 +16,7 @@ const Home = () => {
       <SiderBar offer={offer} />
 
       <Categories titulo="Cooking Courses">
-        <Carousel itemWidth={itemWidth}>
+        <Carousel itemHeight={itemHeight}>
           {carouselList
             .filter(
               (item) => item.category.toLowerCase() === "Cocina".toLowerCase()
@@ -24,9 +24,10 @@ const Home = () => {
             .map((item, key) => (
               <CarouselItem
                 key={key}
-                itemWidth={itemWidth}
+                itemHeight={itemHeight}
                 title={item.title}
                 description={item.shortDescription}
+                price={item.price}
                 pictureLink={item.pictureLink}
                 item={item}
               />
@@ -35,7 +36,7 @@ const Home = () => {
       </Categories>
 
       <Categories titulo="Music Courses">
-        <Carousel itemWidth={itemWidth}>
+        <Carousel itemHeight={itemHeight}>
           {carouselList
             .filter(
               (item) => item.category.toLowerCase() === "Musica".toLowerCase()
@@ -43,9 +44,10 @@ const Home = () => {
             .map((item, key) => (
               <CarouselItem
                 key={key}
-                itemWidth={itemWidth}
+                itemHeight={itemHeight}
                 title={item.title}
                 description={item.shortDescription}
+                price={item.price}
                 pictureLink={item.pictureLink}
                 item={item}
               />
@@ -54,7 +56,7 @@ const Home = () => {
       </Categories>
 
       <Categories titulo="Programming Courses">
-        <Carousel itemWidth={itemWidth}>
+        <Carousel itemHeight={itemHeight}>
           {carouselList
             .filter(
               (item) =>
@@ -63,9 +65,10 @@ const Home = () => {
             .map((item, key) => (
               <CarouselItem
                 key={key}
-                itemWidth={itemWidth}
+                itemHeight={itemHeight}
                 title={item.title}
                 description={item.shortDescription}
+                price={item.price}
                 pictureLink={item.pictureLink}
                 item={item}
               />
