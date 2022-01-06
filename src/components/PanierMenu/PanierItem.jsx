@@ -20,34 +20,37 @@ const PanierItem = (props) => {
       </div>
       <p>{props.description}</p>
       <p>${props.price}</p>
-      <p>{props.quantity}</p>
-      <div className="buttonContainer">
-        <button
-          type="button"
-          className="buttonStyle"
-          onClick={() => {
-            dispatch(incrementQty(props.id));
-          }}
-        >
-          <div className="divContainer">
-            <span>+</span>
-          </div>
-        </button>
-        <button
-          type="button"
-          className="buttonStyle"
-          onClick={() => {
-            if (props.quantity > 1) {
-              dispatch(decrementQty(props.id));
-            } else {
-              dispatch(deleteCourse(props.id));
-            }
-          }}
-        >
-          <div className="divContainer">
-            <span>-</span>
-          </div>
-        </button>
+
+      <div className="quantity">
+        <p>{props.quantity}</p>
+        <div className="buttonContainer">
+          <button
+            type="button"
+            className="buttonStyle"
+            onClick={() => {
+              dispatch(incrementQty(props.id));
+            }}
+          >
+            <div className="divContainer">
+              <span>+</span>
+            </div>
+          </button>
+          <button
+            type="button"
+            className="buttonStyle"
+            onClick={() => {
+              if (props.quantity > 1) {
+                dispatch(decrementQty(props.id));
+              } else {
+                dispatch(deleteCourse(props.id));
+              }
+            }}
+          >
+            <div className="divContainer">
+              <span>-</span>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   );

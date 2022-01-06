@@ -125,3 +125,23 @@ $sliderBtn-position: $imgHeight - 4rem;
 #radio4:checked ~ .navigation-auto .auto-btn4 {
   background: $blue;
 }
+
+//Tablet
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .slider {
+    height: $imgHeight + 2.5rem;
+  }
+}
+
+//Mobile
+@media only screen and (max-width: 768px) {
+  .slider {
+    height: $imgHeight + 2.5rem;
+
+    & .offers {
+      & h2 {
+        font-size: fontSize(medium);
+      }
+    }
+  }
+}

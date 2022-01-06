@@ -35,7 +35,7 @@
   padding: 10px 10px;
   position: absolute;
   top: 70px;
-  right: 40px;
+  right: 5px;
 
   & .headingContainer {
     display: grid;
@@ -45,12 +45,12 @@
     background: $blue;
     padding: 1.5px 0;
     border-bottom: 2px solid $white;
-    grid-template-columns: 2fr 3fr 1.5fr 1.5fr;
+    grid-template-columns: 2.2fr 3fr 1.5fr 1.4fr 0.35fr;
     grid-template-rows: auto;
   }
 
   & .scrollContainer {
-    max-height: 352px;
+    max-height: 48rem;
     overflow: hidden scroll;
 
     & .bodyContainer {
@@ -59,36 +59,46 @@
       justify-items: center;
       align-items: center;
       width: 100%;
-      grid-template-columns: 2.3fr 3fr 1fr 1fr 0.8fr;
+      grid-template-columns: 2.2fr 3fr 1.5fr 1.1fr;
       grid-template-rows: auto;
       background: $ligthGray;
       border-bottom: 2px solid $white;
       padding-right: 10px;
-      // & p{}
 
-      & .buttonContainer {
+      & .quantity {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 55px;
-        position: relative;
-        & .buttonStyle {
-          width: 25px;
-          height: 25px;
-          border-radius: 20px;
-          background-color: $blue;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
 
-          transition: all 200ms ease 0s;
-          & .divContainer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        & p {
+          margin-bottom: 0.5rem;
+        }
 
-            & span {
-              width: 11px;
-              position: absolute;
-              color: $white;
-              font-weight: 800;
+        & .buttonContainer {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 55px;
+          position: relative;
+          & .buttonStyle {
+            width: 25px;
+            height: 25px;
+            border-radius: 20px;
+            background-color: $blue;
+
+            transition: all 200ms ease 0s;
+            & .divContainer {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              & span {
+                width: 11px;
+                position: absolute;
+                color: $white;
+                font-weight: 800;
+              }
             }
           }
         }
@@ -98,8 +108,8 @@
 }
 
 .imgItem {
-  width: 120px;
-  height: 170px;
+  width: 170px;
+  height: 200px;
   object-fit: cover;
   padding: 5px;
 }
@@ -115,26 +125,45 @@
     margin: 0;
   }
 }
-// div.gallery img {
-//   width: 100%;
-//   height: auto;
-// }
 
-// .responsive {
-//   padding: 0 6px;
-//   float: left;
-//   width: 24.99999%;
-// }
+//Mobile
+@media only screen and (max-width: 768px) {
+  //Table
+  .tableContainer {
+    top: 60px;
+    right: 0;
 
-// @media only screen and (max-width: 700px) {
-//   .responsive {
-//     width: 49.99999%;
-//     margin: 6px 0;
-//   }
-// }
+    & .headingContainer {
+      grid-template-columns: 2.2fr 3fr 1.5fr 1.4fr;
+      & p {
+        font-size: fontSize(medium);
+        margin: 0.3rem 0;
+      }
+    }
 
-// @media only screen and (max-width: 500px) {
-//   .responsive {
-//     width: 100%;
-//   }
-// }
+    & .scrollContainer {
+      max-height: 35rem;
+
+      & .bodyContainer {
+        & p {
+          // font-size: fontSize(medium);
+          font-size: 13px;
+          // font-weight: 500;
+        }
+        & .buttonContainer {
+          width: 60px;
+
+          & .buttonStyle {
+            width: 28px;
+            height: 28px;
+          }
+        }
+      }
+    }
+  }
+
+  .imgItem {
+    width: 120px;
+    height: 170px;
+  }
+}
